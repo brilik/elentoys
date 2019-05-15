@@ -108,6 +108,10 @@ function elentoys_menu()
             $menu_list .= '</li>' . "\n";
         }
         $menu_list .= "\t\t\t\t" . '</ul>' . "\n";
+    } else {
+
+        $menu_list .= 'Нужно создать меню в админке!</ul>';
+
     }
 
     echo $menu_list;
