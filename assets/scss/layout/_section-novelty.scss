@@ -1,0 +1,185 @@
+.section_novelty {
+    background: #f9f9f9;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -96px;
+        left: 0;
+        background: url(../img/novelty-wave.png) no-repeat 50% 0;
+        background-size: 100% 100%;
+        height: 98px;
+        width: 100%;
+    }
+    .btn {
+        margin: -10px auto 0;
+    }
+}
+.novelty-slider__picture{
+     position: relative;
+    padding-top: 41px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    img{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+        max-height: 305px;
+        transition: 0.2s;
+    }
+}
+.novelty-slider__round{
+    position: absolute;
+    background: #CAAED3;
+
+    border-radius: 50%;
+    top: 0;
+    display: block;
+    width: 285px;
+    height: 285px;
+    left: 50%;
+    margin-left: -142.5px;
+    transition: 0.2s;
+    &::after{
+        border: 1px dashed #ffffff;
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        top: 10px;
+        display: block;
+        transition: 0.2s;
+        border-radius: 50%;
+    }
+    .nov-sl__line1{
+        position: absolute;
+        width: 75px;
+        right: -47px;
+          transition: 0.2s;
+        opacity: 0;
+        top: 72px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .nov-sl__line2{
+        position: absolute;
+        width: 87px;
+            left: -20px;
+    bottom: 77px;
+        transition: 0.2s;
+        opacity: 0;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+.novetly-slider {
+    margin-bottom: 0px;
+    margin-left: -45px;
+    margin-right: -45px;
+    margin-top: 66px;
+    &__item {
+        min-height: 576px;
+        padding-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        &.slick-current {
+            .novetly-slider__img {
+                transform: scale(1.2) translateY(25px);
+                margin-bottom: 55px;
+            }
+            .novetly-slider__text {
+                color: $black;
+            }
+        }
+        &:hover {
+            .novetly-slider__text {
+                color: $pink;
+            }
+        }
+    }
+    &__img {
+        max-width: 285px;
+        display: block;
+        margin: 0 auto;
+        transition: .3s;
+        margin-bottom: 10px;
+    }
+    &__text {
+        text-align: center;
+        transition: .3s;
+        font-family: 'Nefelibata SansCd Canvas';
+        color: rgba(76, 46, 56, 0.329);
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+    .slick-arrow {
+        &:hover {
+            opacity: 0.831;
+            box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.04);
+        }
+    }
+    .prev-arrow {
+        right: -17%;
+        top: 50%;
+        &::before {
+            background: rgba(151, 128, 102, 0.749);
+            opacity: 0.271;
+        }
+    }
+    .next-arrow {
+        right: -17%;
+        top: 49.5%;
+    }
+    .custom_paging {
+        right: -17.15%;
+        top: 95%;
+        &::before {
+            background-color: rgb(151, 204, 199);
+            opacity: 0.271;
+        }
+        &::after {
+            background-color: rgba(151, 128, 102, 0.749);
+            opacity: 0.271;
+        }
+    }
+    .slick-center {
+        .novelty-slider__round{
+            transform: scale(1.23);
+            top: 32px;
+            background: #F6D6E1;
+        }
+        .novelty-slider__picture{
+            padding-top: 51px;
+            margin-bottom: 20px;
+            img{
+                transform: scale(1.1);
+            }
+        }
+        .nov-sl__line2{
+            opacity: 1;
+        }
+        .nov-sl__line1{
+            opacity: 1;
+        }
+}
+}
+
+@media(max-width: 1780px) {
+    .novetly-slider .prev-arrow,
+    .novetly-slider .next-arrow {
+        right: -60px;
+    }
+    .novetly-slider .custom_paging {
+        right: -62px;
+    }
+}

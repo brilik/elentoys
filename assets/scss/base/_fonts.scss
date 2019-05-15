@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Nefelibata Extras';
+    src: url('../fonts/Nefelibata-Extras.eot');
+    src: url('../fonts/Nefelibata-Extras.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-Extras.woff2') format('woff2'),
+    url('../fonts/Nefelibata-Extras.woff') format('woff'),
+    url('../fonts/Nefelibata-Extras.svg#Nefelibata-Extras') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+    url('../fonts/MyriadPro-Regular.woff') format('woff'),
+    url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata Script';
+    src: url('../fonts/Nefelibata-Script.eot');
+    src: url('../fonts/Nefelibata-Script.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-Script.woff2') format('woff2'),
+    url('../fonts/Nefelibata-Script.woff') format('woff'),
+    url('../fonts/Nefelibata-Script.ttf') format('truetype'),
+    url('../fonts/Nefelibata-Script.svg#Nefelibata-Script') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../fonts/CenturyGothic.eot');
+    src: url('../fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CenturyGothic.woff2') format('woff2'),
+    url('../fonts/CenturyGothic.woff') format('woff'),
+    url('../fonts/CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata Sans';
+    src: url('../fonts/Nefelibata-Sans.eot');
+    src: url('../fonts/Nefelibata-Sans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-Sans.woff2') format('woff2'),
+    url('../fonts/Nefelibata-Sans.woff') format('woff'),
+    url('../fonts/Nefelibata-Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata SansCd';
+    src: url('../fonts/Nefelibata-SansCd.eot');
+    src: url('../fonts/Nefelibata-SansCd.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-SansCd.woff2') format('woff2'),
+    url('../fonts/Nefelibata-SansCd.woff') format('woff'),
+    url('../fonts/Nefelibata-SansCd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata SansCd Canvas';
+    src: url('../fonts/Nefelibata-SansCdCanvas.eot');
+    src: url('../fonts/Nefelibata-SansCdCanvas.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-SansCdCanvas.woff2') format('woff2'),
+    url('../fonts/Nefelibata-SansCdCanvas.woff') format('woff'),
+    url('../fonts/Nefelibata-SansCdCanvas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata SansCanvas';
+    src: url('../fonts/Nefelibata-SansCanvas.eot');
+    src: url('../fonts/Nefelibata-SansCanvas.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-SansCanvas.woff2') format('woff2'),
+    url('../fonts/Nefelibata-SansCanvas.woff') format('woff'),
+    url('../fonts/Nefelibata-SansCanvas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nefelibata Pen Sans';
+    src: url('../fonts/Nefelibata-PenSans.eot');
+    src: url('../fonts/Nefelibata-PenSans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Nefelibata-PenSans.woff2') format('woff2'),
+    url('../fonts/Nefelibata-PenSans.woff') format('woff'),
+    url('../fonts/Nefelibata-PenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nefelibata - Brush";
+    src: url('../fonts/brush/Nefelibata-Brush.eot');
+    src: url('../fonts/brush/Nefelibata-Brush.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/brush/Nefelibata-Brush.woff') format('woff'),
+    url('../fonts/brush/Nefelibata-Brush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Material - Design - Iconic - Font";
+    src: url('../fonts/material/Material-Design-Iconic-Font.eot');
+    src: url('../fonts/material/Material-Design-Iconic-Font.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/material/Material-Design-Iconic-Font.woff2') format('woff2'),
+    url('../fonts/material/Material-Design-Iconic-Font.woff') format('woff'),
+    url('../fonts/material/Material-Design-Iconic-Font.ttf') format('truetype'),
+    url('../fonts/material/Material-Design-Iconic-Font.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/Icomoon/icomoon.eot?dii79h');
+  src:  url('../fonts/Icomoon/icomoon.eot?dii79h#iefix') format('embedded-opentype'),
+    url('../fonts/Icomoon/icomoon.ttf?dii79h') format('truetype'),
+    url('../fonts/Icomoon/icomoon.woff?dii79h') format('woff'),
+    url('../fonts/Icomoon/icomoon.svg?dii79h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+  content: "\e900";
+}
+.icon-arrow-up:before {
+  content: "\e901";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-inst:before {
+  content: "\e903";
+}
+.icon-skype:before {
+  content: "\e904";
+}
+.icon-telegram:before {
+  content: "\e905";
+}
+.icon-twitter:before {
+  content: "\e906";
+}
+.icon-viber:before {
+  content: "\e907";
+}
+.icon-vk:before {
+  content: "\e908";
+}
+.icon-whatsapp:before {
+  content: "\e909";
+}
+
+
+
+
+
+

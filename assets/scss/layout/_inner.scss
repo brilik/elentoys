@@ -1,0 +1,741 @@
+/*=============================================================
+PROTECTION INFO PAGE
+=============================================================*/
+
+.box-protection {
+	padding: 46px 0 60px;
+	&__title {
+		font-size: 28px;
+		margin-bottom: 25px;
+	}
+	&__desc {
+		padding-bottom: 23px;
+		font-size: 14px;
+		line-height: 21px;
+		color: rgba(30, 30, 30, .8);
+		text-align: justify;
+	}
+}
+
+/*=============================================================
+VACANCY PAGE
+=============================================================*/
+
+.box-vacancy-top {
+	padding: 44px 0 36px;
+	&__desc {
+		margin-top: 30px;
+		max-width: 545px;
+	}
+}
+
+.box-vacancy {
+	padding: 71px 0;
+	&__title {
+		margin-bottom: 28px;
+	}
+}
+
+.vacancy-list {
+	&-wrap {
+		margin-top: 23px;
+	}
+	&__item {
+		max-width: 1041px;
+		padding: 29px 0 30px;
+		display: flex;
+		border-bottom: 1px solid rgba(205, 205, 205, .5);
+	}
+	& .col_1 {
+		width: calc(100% - 180px);
+	}
+	& .col_2 {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		width: 180px;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1;
+		color: #1E1E1E;
+	}
+	&__geo,
+	&__date {
+		padding: 14px 0px 9px;
+		font-size: 14px;
+		line-height: 21px;
+		color: rgba(30, 30, 30, .5);
+	}
+	&__desc {
+		font-size: 15px;
+		line-height: 23px;
+		color: rgba(30, 30, 30, .8);
+		max-height: 90px;
+		overflow: hidden;
+		&.active {
+			max-height: 100%;
+		}
+	}
+	&__more {
+		display: inline-block;
+		margin-top: 21px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: normal;
+		color: #0FCB0B;
+		border-bottom: 1px dashed #0FCB0B;
+		cursor: pointer;
+		transition: $transition; 
+		& span:last-child {
+			display: none;
+		}	
+		&.active {
+			& span:first-child {
+				display: none;
+			}
+			& span:last-child {
+				display: block;
+			}			
+		}
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+	&__salary {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+		color: #1E1E1E;
+	}
+	&__btn {
+		margin-top: auto;
+		transform: translateY(10px);
+		.btn {
+			max-width: 161px;
+    		padding: 6px 19px;
+		}
+	}
+}
+
+.pagination-list {
+	display: flex;
+	&-wrap {
+		margin-top: 26px;
+	}
+	&__item {
+		display: block;
+		margin-right: 10px;
+		&.active .pagination-list__link {
+			background: rgba(119, 106, 255, .2);
+			color: #1E1E1E;
+			font-weight: 500;
+		}
+	}
+	&__link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 40px;
+		text-align: center;
+		color: rgba(30, 30, 30, .5);	
+		transition: $transition;
+		&:hover {
+			color: #1E1E1E;
+		}		
+	}
+}
+
+.box-wait {
+	padding: 44px 0 134px;
+	&__title {
+		text-transform: none;
+		letter-spacing: 0;
+		font-weight: bold;
+		line-height: normal;
+		color: #776AFF;
+	}
+}
+
+/*=============================================================
+COOPERATION PAGE
+=============================================================*/
+
+.box-cooperation {
+	padding: 44px 0 160px;
+}
+
+.cooperation-list {
+	flex-wrap: wrap;
+	display: flex;
+	margin: -30px -25px;
+	&-wrap {
+		margin-top: 45px;
+	}
+	&__item {
+		width: 50%;
+		padding: 30px 25px;
+	}
+	&__img img {
+		width: 100%;
+	}
+	&__title {
+		margin-top: 19px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: normal;
+		text-transform: uppercase;
+		color: rgba(30, 30, 30, .9);
+	}
+	&__subtitle {
+		padding: 16px 0 10px;
+		font-weight: bold;
+		font-size: 22px;
+		line-height: normal;
+		color: #1E1E1E;
+	}
+	&__desc {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 23px;
+		color: rgba(30, 30, 30, .8);
+		max-width: 530px;
+	}
+	&__bottom {
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__link {
+		display: inline-block;
+		font-size: 14px;
+		line-height: normal;
+		color: #0FCB0B;
+		border-bottom: 1px dashed #0FCB0B;
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+	&__btn {
+		width: 100%;
+		max-width: 270px;
+	}
+}
+
+/*=============================================================
+ABOUT COMPANY PAGE
+=============================================================*/
+
+.box-about {
+	padding: 48px 0 89px;
+	&__wrap {
+		display: flex;
+		margin-top: 41px;
+		position: relative;
+	}
+	&__img {
+		width: 46%;
+	}
+	&__info {
+		width: 54%;
+	}	
+	&__row {
+		padding-left: 60px;
+		padding-bottom: 62px;
+		position: relative;
+	}
+	&__row_dark {
+		padding-top: 37px;
+		background: #EEEFF0;
+		padding-bottom: 148px;
+	}
+	&__title {
+		line-height: 1;
+		text-transform: none;
+		font-size: 22px;
+		padding-bottom: 26px;
+		position: relative;
+		z-index: 2;
+	}
+	&__desc {
+		max-width: 451px;
+	}
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+	&__logo img {
+		position: absolute;
+		display: block;
+		top: 100%;
+		transform: translateY(-69%);
+		right: 40px;
+		width: 378px;
+		z-index: 1;
+	}
+}
+
+.requisites-list {
+	position: relative;
+	z-index: 2;
+	&__item {
+		font-size: 15px;
+		line-height: 30px;
+		color: rgba(30, 30, 30, .8);
+	}
+}
+
+/*=============================================================
+CARD PAGE
+=============================================================*/
+
+.box-card {
+	padding: 38px 0 109px;
+	&__wrap {
+		display: flex;
+	}
+	&__slider {
+		width: 50%;
+	}
+	.design-board-rating-wrap {
+    	margin-top: -22px;
+    	padding: 0;
+	}
+	.form-filter__select {
+		max-width: 350px;
+		padding: 17px 20px;
+		height: 50px;
+	}
+	.form-filter__select-title {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: normal;
+		color: #8F8F8F;
+		span {
+			color: rgba(30, 30, 30, 1);
+		}
+	}
+	.select-list__item {
+		color: #8F8F8F;
+		padding: 7px 20px;
+		span {
+			color: rgba(30, 30, 30, 1);
+		}
+	}
+	.tab-wrap {
+		margin-top: 57px;
+	}
+	.nav-tab-list {
+		justify-content: flex-start;
+	}
+	.nav-tab-list__link {
+		font-size: 20px;
+	}
+	.nav-tab-list__item {
+		margin-right: 45px;
+	}
+}
+
+.card-slider__item {
+	cursor: pointer;
+}
+
+.card-slider-nav {
+	margin: 0 -10px;
+	margin-top: 20px;
+	.slick-arrow.slick-prev {
+		left: -10px;
+	}
+	.slick-arrow.slick-next {
+		right: -10px;
+	}
+	&__item {
+		padding: 0 10px;
+		img {
+			cursor: pointer;
+		}
+	}
+}
+
+.card-info {
+	width: 50%;
+	padding-left: 56px;
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 4px;
+	}
+	&__bottom {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		.catalog-goods-list__heart {
+			margin-left: 20px;
+		}
+	}
+	&__title {
+		letter-spacing: .5px;
+		color: #1E1E1E;
+		text-transform: none;
+	}
+	&__subtitle {
+		margin-top: 5px;
+		font-size: 18px;
+		line-height: 27px;
+		color: rgba(30, 30, 30, .8);
+		font-weight: normal;
+	}
+	&__price-current {
+		margin-top: 22px;
+    	margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: normal;
+		color: #0FCB0B;
+	}
+	&__price-old {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: normal;
+		text-decoration-line: line-through;
+		color: rgba(30, 30, 30, .8);
+	}
+	&__vendor-code {
+		margin: 25px 0 3px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(30, 30, 30, .5);
+	}
+	&__bonus {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 20px;
+		color: #776AFF;
+	}
+	&__desc {
+		margin: 13px 0 30px;
+		max-width: 361px;
+	}
+}
+
+.card-desc {
+	display: flex;
+	margin: 0 -10px;
+	margin-top: 43px;
+	max-width: 1200px;
+	.col {
+		width: 33.33%;
+		padding: 0 10px;
+	}
+	&__text {
+		padding: 0;
+		margin-bottom: 15px;
+	}
+}
+
+.size-list {
+	width: 100%;
+	font-size: 15px;
+	line-height: 24px;
+	color: rgba(30, 30, 30, .8);
+	padding: 25px 22px;
+	background: rgba(238, 239, 240, .6);
+	&__row {
+		margin-bottom: 19px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		line-height: 1;
+		padding-bottom: 12px;
+		margin-bottom: 7px;
+		border-bottom: 1px solid rgba(205, 205, 205, .5);
+	}
+	&__item {
+		line-height: 25px;
+		strong {
+			white-space: nowrap;
+		}
+	}
+}
+
+@media (max-width: 1280px) {
+	.box-about__logo img {
+		width: 320px;
+	}
+	.box-about__row {
+		padding-left: 50px; 
+		padding-bottom: 50px;
+	}
+	.card-info {
+		padding-left: 40px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.box-wait {
+		padding: 30px 0 110px;
+	}
+	.cooperation-list__btn {
+		max-width: 180px;
+	}
+	.cooperation-list__bottom {
+    	margin-top: 25px;
+	}
+	.cooperation-list {
+		margin: -25px -15px;
+	}
+	.cooperation-list__item {
+		padding: 25px 15px;
+	}
+	.box-cooperation {
+		padding: 44px 0 120px;
+	}	
+	.box-about__logo img {
+		width: 250px;
+	}
+	.box-about__row {
+    	padding-left: 35px; 
+		padding-bottom: 35px;
+	}
+	.box-about__row_dark {
+		padding-bottom: 100px;
+	}
+	.card-info {
+		padding-left: 30px;
+	}
+	.box-card .nav-tab-list__link {
+		font-size: 19px;
+	} 
+	.card-desc {
+		flex-wrap: wrap;
+	}
+	.card-desc .col {
+		width: 50%; 
+		margin-bottom: 30px;	
+	}
+	.box-card__slider {
+		width: 55%;
+	}
+	.card-info {
+		width: 45%;
+	}
+	.card-info__top {
+		flex-wrap: wrap;
+		min-height: 90px;
+		.col {
+			width: 100%;
+		}
+	}
+	.box-card .design-board-rating-wrap {
+    	margin-top: 0; 
+	}
+	.card-info__subtitle {
+		margin-top: 0;
+	}
+	.card-info__top {
+		align-items: flex-start;
+	}
+	.box-card .nav-tab-list__item {
+		margin-right: 35px;
+	}
+	.box-card {
+		padding: 38px 0 70px;
+	}
+	.card-desc {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.card-desc {
+		margin-top: 25px;
+	}
+	.box-card .tab-wrap {
+		margin-top: 45px;
+	}
+	.card-desc .col {
+		width: 100%; 
+		margin-bottom: 0;
+	}
+	.slick-slide img {
+		width: 100%;
+	}
+	.card-info__bottom {
+		justify-content: center;
+	}
+	.box-card .form-filter__select {
+		margin: 0 auto;
+	}
+	.box-card__wrap {
+		flex-wrap: wrap; 
+		position: relative;
+	}
+	.box-card__slider {
+		width: 100%;
+		margin-top: 110px;
+	}
+	.card-info__top {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.card-info {
+		width: 100%;
+		padding-left: 0;
+	}
+	.box-vacancy {
+		padding: 50px 0 60px;
+	}
+	.box-vacancy-top {
+		padding: 40px 0 36px;
+	}
+	.cooperation-list__item {
+		width: 100%;
+	}
+	.box-cooperation {
+		padding: 44px 0 90px;
+	}	
+	.box-about__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(255, 255, 255, .9);
+		}
+	}
+	.box-about__img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.box-about__info {
+		width: 100%;
+	}
+	.box-about__row {
+		padding-left: 0;
+	}
+	.box-about__row_dark {
+		padding-top: 0;
+		background-color: transparent;
+	}
+	.card-info__vendor-code {
+    	margin: 15px 0 0px; 
+	}
+	.box-card .nav-tab-list {
+		flex-wrap: wrap;
+	}
+	.box-card .nav-tab-list__item {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.size-list {
+    	padding: 25px 15px;
+	}
+	.size-list__item {
+		font-size: 14px;
+	}
+	.box-protection {
+		padding: 40px 0;
+	}
+	.pagination-list {
+		justify-content: center;
+	}
+	.pagination-list__item {
+		margin: 0 5px;
+	}
+	.vacancy-list__item {
+		flex-direction: column;
+	}
+	.vacancy-list .col_1,
+	.vacancy-list .col_2 {
+		width: 100%;
+		flex: 1 1 auto;
+	}
+	.vacancy-list__geo, .vacancy-list__date {
+    	padding: 9px 0px;
+	}
+	.vacancy-list .col_1 {
+		text-align: center;
+	}
+	.vacancy-list .col_2 {
+		margin-top: 20px;
+		text-align: center;
+	}
+	.vacancy-list__title,
+	.vacancy-list__geo,
+	.vacancy-list__desc {
+		text-align: left;
+	}
+	.box-wait {
+		padding: 30px 0 80px;
+	}
+	.vacancy-list__btn {
+		margin-top: 10px;
+		transform: none;
+	}
+	.cooperation-list__btn {
+		max-width: 150px;
+	}
+	.box-about__logo img {
+		width: 180px;
+	}
+	.box-about__row_dark {
+		padding-bottom: 70px;
+	}
+	.box-about {
+		padding: 40px 0 80px;
+	}
+	.card-info__subtitle {
+    	margin-top: 0;
+    	font-size: 16px;
+	}
+	.box-card__slider {
+		margin-top: 100px;
+	}
+	.box-card {
+    	padding: 25px 0 60px;
+	}
+	.card-info__desc {
+    	margin: 10px 0 20px;
+	}
+}
+
+@media (max-width: 360px) {
+	.card-slider-nav {
+		margin: 0 -7.5px;
+		margin-top: 15px;
+	}
+	.card-slider-nav__item {
+		padding: 0 7.5px;
+	}
+}

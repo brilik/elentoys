@@ -1,0 +1,389 @@
+
+.note-wrapper {
+	padding-top: 84px;
+    .blog-section__top{
+        min-height: 609px;
+        background-image: url(../img/note-bg.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        &::before{
+               content: '';
+    display: block;
+    position: absolute;
+    background: url(../img/girl.png);
+    width: 694px;
+    max-width: none;
+    height: 556px;
+            background-position: bottom;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 14.8%;
+    bottom: -8px;
+    z-index: 0;
+        }
+        &::after{
+            z-index: 1;
+        }
+        
+        
+     
+    }
+    .blog-top__title{
+        font-size: 72px;
+    }
+    .blog-section {
+	padding-bottom: 176px;
+}
+    .blog-top__title{
+    white-space: nowrap;
+}
+}
+.note-wrapper .blog-top__wrap{
+    display: flex;
+    justify-content: center;
+    top: 125px;
+}
+.note-section__title{
+        color: #1d1c1c;
+    font-family: 'Nefelibata Sans';
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+    text-align: center;
+    .nav__icon{
+         position: relative;
+        top: 11px;
+        margin-right: 7px;
+        margin-left: 7px;
+      
+    }
+}
+.note-section__product {
+	padding-top: 87px;
+    p{
+        color: #515151;
+        font-family: "Century Gothic";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        padding-left: 16px;
+        padding-bottom: 10px;
+        b{
+            font-family: 'Nefelibata SansCanvas';
+            font-size: 26px;
+        }
+    }
+}
+.note-section__pretitle{
+    color: #1d1c1c;
+    font-family: 'Nefelibata SansCd Canvas';
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 44px;
+}
+.note-img__wrap{
+    position: relative;
+    &::after{
+             background: url(../img/but2.png);
+           width: 337px;
+            height: 187px;
+        bottom: -153px;
+            right: -61px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        content: '';
+        display: block;
+        position: absolute;
+    }
+}
+.note-section__img {
+    position: relative;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    margin-bottom: 52px;
+    &.img2{
+        margin-top: 47px;
+        &::before{
+           display: none !important;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        display: block;
+        left: 30px;
+        top: 30px;
+        bottom: 30px;
+        right: 30px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        opacity: 0.7;
+        border: 2px dashed #f4f2f0;
+    }
+    &::before{
+        background: url(../img/blog-s.png);
+        background-repeat: no-repeat;
+        width: 181px;
+        height: 73px;
+        display: block;
+        position: absolute;
+            right: -73px;
+    bottom: -41px;
+        content: '';
+    }
+}
+.note-section__box{
+    display: flex;
+    justify-content: space-between;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 67px;
+    .note-section__img{
+        width: calc(50% - 15px);
+        margin: 0;
+        &::before{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+::-webkit-full-page-media, :future, :root{ 
+        .note-wrapper .blog-top__title{
+            margin-left: -29%;
+        }
+    }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+     .note-wrapper .blog-top__title{
+            margin-left: -29%;
+        }
+}
+@media screen and (max-width: 1700px){
+    .note-wrapper .blog-section__top::before{
+        left: 0;
+    }
+}
+@media screen and (max-width: 1199px){
+    .note-section__img::before{
+        display: none;
+    }
+    .note-section__img.img2::before{
+        display: block;
+    }
+    .note-wrapper .blog-section__top::before{
+        bottom:1px;
+        width: 550px;
+    }
+    .note-section__img.img2::before{
+        right: -120px;
+    }
+    ::-webkit-full-page-media, :future, :root{ 
+        .note-wrapper .blog-top__title{
+            margin-left: -58px;
+        }
+    }
+}
+@media screen and (max-width: 1023px){
+    .note-wrapper .blog-section__top{
+        min-height: 473px;
+    }
+    .note-wrapper .blog-top__title{
+        font-size: 60px;
+    }
+    .note-wrapper {
+        &.main-wrapper{
+            padding-top: 84px;
+        }
+}
+   .note-wrapper .blog-top__wrap{
+        top: 90px;
+    }
+    .note-wrapper .blog-section__top::before{
+        left: -86px;
+        bottom: -8px;
+    }
+    .note-wrapper .blog-section__top{
+        overflow: hidden;
+    }
+    .note-wrapper {
+        .blog-section__price{
+            padding-top: 13px;
+        }
+}
+    .note-section__title{
+        font-size: 36px;
+    }
+    .note-section__pretitle{
+    font-size: 36px;
+        line-height: 1;
+        margin-bottom: 32px;
+    }
+    .note-section__product{
+        padding-top: 53px;
+    }
+    .note-section__title .nav__icon{
+        top: 4px;
+        font-size: 21px;
+    }
+    .note-section__product p{
+        color: #515151;
+
+font-size: 15px;
+font-weight: 400;
+line-height: 22px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 0;
+    }
+    .note-section__img{
+        max-width: 570px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-bottom: 33px;
+    }
+    .note-section__box{
+        max-width: 570px;
+        margin-top: 34px;
+        margin-bottom: 31px;
+    }
+    .note-section__img::after{
+        left: 20px;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+    .note-section__box .note-section__img{
+        width: calc(50% - 9px);
+    }
+    .note-section__product p b{
+        font-size: 22px;
+    }
+    .note-section__img.img2{
+        margin-top: 34px;
+       
+    }
+    .note-img__wrap{
+        &::after{
+                width: 259px;
+    height: 187px;
+    bottom: -166px;
+    right: -26px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .note-wrapper .blog-section__top{
+        min-height: 390px;
+    }
+    .main-wrapper.note-wrapper {
+	padding-top: 55px;
+}
+    .note-wrapper .blog-top__wrap{
+        top: 65px;
+    }
+    .note-wrapper .blog-section__top::before{
+        width: 419px;
+        left: -155px;
+    bottom: 35px;
+    }
+    .note-wrapper .blog-top__title{
+        font-size: 48px;
+        
+ 
+  
+    }
+    ::-webkit-full-page-media, :future, :root{ 
+    .note-wrapper .blog-top__title{
+            margin-left: -41px;
+    }
+}
+   ::-webkit-full-page-media, :future, :root{ 
+        .note-wrapper .blog-top__title{
+            margin-left: -47px;
+        }
+    }
+    .note-wrapper .blog-section__price{
+        padding-top: 0;
+    }
+    .note-section__title{
+        font-size: 22px;
+        line-height: 1.05;
+        .product-section__name{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .note-section__product{
+        padding-top: 31px;
+    }
+    .note-section__pretitle{
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 21px;
+    }
+    .note-section__product p{
+        padding-left: 0;
+        font-size: 14px;
+        padding-right: 0;
+        line-height: 20px;
+    }
+    .note-wrapper {
+        .wrapper{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+}
+    .note-section__img{
+        margin-top: 17px;
+        margin-bottom: 27px;
+    }
+    .note-section__box .note-section__img{
+        border-radius: 25px;
+    }
+    .note-section__box {
+        .note-section__img::after{
+            border-radius: 25px;
+            left: 10px;
+            right: 10px;
+            top: 10px;
+            bottom: 10px;
+        }
+}
+    .note-img__wrap::after{
+        display: none;
+    }
+    .note-section__product p b{
+        font-size: 18px;
+        line-height: 16px;
+    }
+    .note-section__box{
+        margin-bottom: 20px;
+        margin-top: 24px;
+    }
+    .note-section__box .note-section__img{
+        width: calc(50% - 5px);
+    }
+    .note-section__img.img2{
+        margin-top: 26px;
+    }
+}

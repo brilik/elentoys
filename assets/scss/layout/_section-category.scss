@@ -1,0 +1,97 @@
+.section_category {
+    background: $white;
+    padding-top: 23px;
+    position: relative;
+    padding-bottom: 21px;
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 13.6%;
+        bottom: 5%;
+        background: url(../img/vector1.svg) no-repeat;
+        width: 179px;
+        height: 94px;
+        transform: rotate(-29deg);
+    }
+}
+
+.categories {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    margin-left: -50px;
+    margin-right: -50px;
+    &__item {
+        width: 33.33%;
+        
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        
+        margin-bottom: 55px;
+        &:hover {
+            .categories__text {
+                color: $pink;
+            }
+            .categories__img {
+                transform: scale(1.05);
+                
+            }
+        }
+    }
+    &__img {
+        transition: .5s;
+    }
+    &__text {
+        font-family: 'Nefelibata SansCd';
+        font-size: 30px;
+        line-height: 25px;
+        color: #1d1c1c;
+        text-align: center;
+        position: relative;
+        margin-top: 26px;
+        font-weight: 500;
+        transition: .3s;
+        letter-spacing: 1.7px;
+        display: flex;
+       
+        justify-content: center;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+        
+            width: 5px;
+            height: 5px;
+             position: relative;
+            bottom: -14px;
+            
+            margin-right: 20px;
+            background: #8dbec5;
+            border-radius: 50%;
+        }
+        &:after {
+           margin-left: 20px;
+            margin-right: 0;
+        }
+    }
+}
+.categories-item__pict{
+    min-height: 250px;
+    img{
+        max-width: 100%;
+    }
+
+}
+.categories-item__pict img{
+    max-height: 100%;
+}
+@media(max-width: 1780px) {
+    .section_category {
+        &:after {
+            right: 30px;
+        }
+    }
+}

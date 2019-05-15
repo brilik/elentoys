@@ -1,0 +1,125 @@
+.section_advantages {
+    background: #f9f9f9;
+    position: relative;
+    padding-top: 51px;
+    padding-bottom: 70px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -67px;
+        left: 0;
+        background: url(../img/novelty-wave.png) no-repeat;
+        background-size: 100% 96px;
+        height: 98px;
+        width: 100%;
+    }
+    .h2 {
+        text-transform: none;
+    }
+    .h2-descr {
+        color: $pink;
+    }
+}
+
+.advantages-slider {
+    padding-top: 25px;
+    z-index: 1;
+    &__img {
+        max-width: 920px;
+        display: block;
+        margin: 0 auto 39px;
+    }
+    &__text {
+        font-family: 'Nefelibata SansCanvas';
+        font-size: 46px;
+        color: #1d1c1c;
+        text-align: center;
+        .nav__icon {
+            margin: 0 32px 0;
+            transform: translateY(-5px);
+            display: inline-block;
+        }
+    }
+    &__buttons {
+        position: absolute;
+        background: url(../img/buttons.png) no-repeat;
+        background-size: contain;
+        width: 337px;
+        height: 219px;
+        right: -134px;
+        bottom: -62px;
+        z-index: 0;
+    }
+    &__clips {
+        background: url(../img/vector1.svg) no-repeat;
+        position: absolute;
+        width: 179px;
+        height: 94px;
+        transform: rotate(-29deg);
+        bottom: 35px;
+        left: 22px;
+        z-index: 3;
+    }
+    &__item_last {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 201px;
+            height: 254px;
+            background: url(../img/advantages-5-after.png) no-repeat;
+            background-size: contain;
+            right: 105px;
+            bottom: 55px;
+        }
+    }
+    .slick-arrow {
+        &:hover {
+            opacity: 0.831;
+            box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.04);
+        }
+    }
+    .prev-arrow {
+        right: -22.2%;
+        top: 37%;
+        &::before {
+            background: rgba(151, 128, 102, 0.749);
+            opacity: 0.271;
+        }
+    }
+    .next-arrow {
+        right: -22.2%;
+        top: 37.5%;
+    }
+    .custom_paging {
+        right: -22.9%;
+        top: 78%;
+        &::before {
+            background-color: rgb(195, 163, 206);
+        }
+        &::after {
+            background-color: rgba(151, 128, 102, 0.749);
+            opacity: 0.271;
+        }
+    }
+}
+
+@media(max-width: 1780px) {
+    .advantages-slider .prev-arrow,
+    .advantages-slider .next-arrow {
+        right: -60px;
+    }
+    .advantages-slider .custom_paging {
+        right: -62px;
+    }
+    .advantages-slider__buttons {
+        right: -60px;
+        bottom: -105px;
+    }
+    .novetly-slider{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

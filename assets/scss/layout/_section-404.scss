@@ -1,0 +1,209 @@
+.wrapper-404 {
+    padding: 150px 0 0 0;
+}
+.content_404 {
+    display: flex;
+}
+
+.section-404 {
+    margin: 0 auto;
+    &__wrapper {
+        height: 100%;
+    }
+    &__footer {
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__box {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__img {
+        width: 48%;
+        align-self: flex-end;
+        img {
+            display: block;
+            width: 110%;
+        }
+    }
+    &__desc {
+        width: 52%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .btn {
+            margin-top: 50px;
+        }
+    }
+
+    &__head {
+        margin-top: 80px;
+        color: #e33576;
+        font-family: "Nefelibata - Brush";
+        font-size: 200px;
+        font-weight: 400;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+
+        .section-404__head-before {
+            content: "404";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-shadow: -5px 7px 0 rgba(232, 249, 254, 0.7);
+            color: #e33576;
+            font-family: "Nefelibata - Brush";
+            font-size: inherit;
+            font-weight: 400;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+        .section-404__head-after {
+            content: "404";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: #e33576;
+            font-family: "Nefelibata - Brush";
+            font-size: inherit;
+            font-weight: 400;
+            text-transform: uppercase;
+            z-index: 5;
+
+            background: linear-gradient(to top, #e33576 0%, #f86ca0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__title {
+        margin-top: -15px;
+        margin-left: 35px;
+        display: flex;
+        .nav__icon {
+            margin: 23px 0 0;
+        }
+    }
+
+    &__name {
+        margin: 0 19px;
+        color: #1d1c1c;
+        font-family: 'Nefelibata Pen Sans';
+        font-size: 56px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.12px;
+    }
+
+    &__text {
+        margin-top: 45px;
+        max-width: 440px;
+        color: #111011;
+        font-family: "Century Gothic";
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .section-404__box {
+    }
+    .section-404__name {
+        font-size: 42px;
+    }
+    .section-404__head {
+        margin-top: 0;
+    }
+    .section-404__desc {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 991px){
+
+    .section-404__img img {
+        display: block;
+        width: 150%;
+        margin-left: -30%;
+    }
+    .section-404__head {
+        font-size: 130px;
+        margin-top: 53px;
+    }
+    .section-404__title {
+        font-size: 38px;
+        margin-left: 0;
+        margin-top: -2px;
+    }
+    .section-404__name {
+        font-size: 38px;
+    }
+    .section-404__title .nav__icon {
+        margin: 14px 0 0;
+    }
+    .section-404__text {
+        max-width: 330px;
+        font-size: 15px;
+        margin-top: 28px;
+    }
+    .section-404__desc .btn {
+        margin-top: 33px;
+    }
+    .section-404__img {
+        margin-left: -10%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .section-404__footer {
+        padding: 25px 0 0;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .section-404__name {
+        font-size: 28px;
+    }
+    .section-404__desc {
+        padding-bottom: 50px;
+    }
+}
+@media screen and (max-width: 600px){
+    .section-404__head {
+        font-size: 110px;
+        margin-top: 30px;
+    }
+    .section-404__desc {
+        width: 100%;
+    }
+    .section-404__img {
+        display: none;
+    }
+    .section-404__name {
+        font-size: 30px;
+        margin: 0px 8px;
+    }
+    .section-404__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .section-404__title .nav__icon {
+        margin: 8px 0 0;
+    }
+	.section-404 {
+		padding-bottom: 75px;
+	}
+}

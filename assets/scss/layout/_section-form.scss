@@ -1,0 +1,105 @@
+.section_form {
+    position: relative;
+    padding-top: 117px;
+    &-1 {
+        background: url(../img/form-1.png) no-repeat;
+          background-position: center bottom;
+        padding-bottom: 188px;
+        background-size: cover;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 63px;
+            width: 100%;
+            top: -1px;
+            left: 0;
+            
+            background: url(../img/form-wave.png) no-repeat;
+            background-size: 100% 100%;;
+        }
+    }
+    &-2 {
+        background: url(../img/form-2.png) no-repeat;
+        background-position: left top;
+        padding-top: 115px;
+        padding-bottom: 130px;
+        background-size: cover;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 90px;
+            width: 100%;
+            top: -12px;
+            left: 0;
+            
+            background: url(../img/form-2-wave.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 351px;
+            height: 294px;
+            background: url(../img/form-2-after.png) no-repeat;
+            right: 4.5%;
+            bottom: -2%;
+            z-index: 2;
+        }
+    }
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        &__title {
+            font-family: 'Century Gothic';
+            font-size: 17px;
+            color: #1d1c1c;
+            text-align: center;
+            margin-bottom: 68px;
+        }
+        &__inputs {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            transform: translateX(-13px);
+            margin-bottom: 60px;
+        }
+        &__input-group {
+            position: relative;
+            padding-left: 15px;
+            padding-right: 15px;
+            .input-icon{
+                left: 33px;
+                cursor: pointer;
+            }
+            input{
+                margin: 0;
+            }
+            &:nth-of-type(2) {
+                i {
+                    font-size: 18px;
+                }
+            }
+            &:nth-of-type(3) {
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+        .btn {
+            margin: 0 auto;
+        }
+    }
+    h2 {
+        text-transform: none;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .section_form .form{
+        align-items: center;
+    }
+    
+}
