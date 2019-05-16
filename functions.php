@@ -123,3 +123,8 @@ function elentoys_menu($menu_name)
  * Add item menu.
  */
 require get_template_directory() . '/inc/item_menu.php';
+
+/**
+ * Add item menu.
+ */
+require get_template_directory() . '/tpl-part/social.php';

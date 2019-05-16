@@ -8,20 +8,9 @@
                 <span></span>
                 <span></span>
             </a>
-            <ul class="social-header">
-                <li class="social__item">
-                    <a href="#" class="social__link"><i class="icon-vk"></i></a>
-                </li>
-                <li class="social__item">
-                    <a href="#" class="social__link"><i class="icon-fb"></i></a>
-                </li>
-                <li class="social__item">
-                    <a href="#" class="social__link"><i class="icon-inst"></i></a>
-                </li>
-                <li class="social__item">
-                    <a href="#" class="social__link"><i class="icon-twitter"></i></a>
-                </li>
-            </ul>
+
+            <?php elentoys_the_social('social-header'); ?>
+
             <a href="#" class="logo logo_header">
 						<span class="animal-imgs">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo-0.svg" alt="" class="animal-img animal-img-1">
@@ -42,7 +31,7 @@
     </div>
 </header>
 
-<?php get_template_part('tpl-part/social'); ?>
+<?php elentoys_the_social('social js-social'); ?>
 
 <a href="#popup-backcall" class="back-call js-fancybox"><i class="zmdi zmdi-phone"></i></a>
 
