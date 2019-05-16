@@ -16,4 +16,11 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title' 	=> 'Соц.сети',
         'parent_slug' 	=> $parent['menu_slug'],
     ));
+    // add sub page
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Настройка подвала сайта',
+        'menu_slug'	  	=> 'theme-footer-settings',
+        'menu_title' 	=> 'Подвал',
+        'parent_slug' 	=> $parent['menu_slug'],
+    ));
 }
