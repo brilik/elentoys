@@ -54,11 +54,12 @@ add_action('after_setup_theme', 'elentoys_setup');
 /**
  * Generate main menu in header. Menu is divided into 2 parts - it left and right.
  * In center menu other classes.
+ *
+ * @param $menu_name
  */
-function elentoys_menu()
+function elentoys_menu($menu_name)
 {
 
-    $menu_name = 'main'; // specify custom menu name
     $menu_list = (string)'';
     $ctr_class = array(
         'after' => '',
@@ -102,12 +103,12 @@ function elentoys_menu()
 
             }
 
-            $menu_list .= "\t\t\t\t\t" . '<li class="nav__item' . $ctr_class['after'] . '">';
+            $menu_list .= '<li class="nav__item' . $ctr_class['after'] . '">';
             $menu_list .= '<a href="' . $url . '" class="nav__link">' . $title . '</a>';
             $menu_list .= ($count !== $i)?$item_love:'';
             $menu_list .= '</li>' . "\n";
         }
-        $menu_list .= "\t\t\t\t" . '</ul>' . "\n";
+        $menu_list .= '</ul>';
     } else {
 
         $menu_list .= 'Нужно создать меню в админке!</ul>';
@@ -116,3 +117,9 @@ function elentoys_menu()
 
     echo $menu_list;
 }
+
+
+/**
+ * Add item menu.
+ */
+require get_template_directory() . '/inc/item_menu.php';

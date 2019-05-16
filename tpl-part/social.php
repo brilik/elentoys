@@ -1,26 +1,21 @@
-<ul class="social js-social">
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-twitter"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-fb"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-vk"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-inst"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-telegram"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-skype"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-whatsapp"></i></a>
-    </li>
-    <li class="social__item">
-        <a href="#" class="social__link"><i class="icon-viber"></i></a>
-    </li>
-</ul>
+<?php
+
+$out = (string)'';
+
+if (get_field('vertical', 'options')):
+
+    $out .= '<ul class="social js-social">';
+
+    while (has_sub_field('vertical', 'options')) {
+
+        $out .= '<li class="social__item">
+                <a href="'.get_sub_field('link').'" class="social__link">
+                <i class="icon-'.get_sub_field('icon').'"></i></a></li>';
+
+    }
+
+    $out .= '</ul>';
+
+endif;
+
+echo $out;
