@@ -2822,6 +2822,7 @@ input:focus + .input-icon i {
 }
 
 .novelty-slider__picture {
+display:block;
   position: relative;
   padding-top: 41px;
   margin-bottom: 10px;
@@ -2945,6 +2946,7 @@ input:focus + .input-icon i {
 }
 
 .novetly-slider__text {
+display:block;
   text-align: center;
   -webkit-transition: .3s;
   -o-transition: .3s;

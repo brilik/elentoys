@@ -243,7 +243,7 @@
                             class="h2__icon h2__icon_reverse">ч</span></h2>
                 <div class="novetly-slider js-novetly-slider">
                     <div class="novetly-slider__item">
-                        <div class="novelty-slider__picture">
+                        <a class="novelty-slider__picture" href="#">
 								<span class="novelty-slider__round">
 									<span class="nov-sl__line1">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png" alt="">
@@ -253,13 +253,13 @@
 									</span>
 								</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide1.png" alt="">
-                        </div>
-                        <div class="novetly-slider__text">Миньон</div>
+                        </a>
+                        <a class="novetly-slider__text" href="#">Миньон</a>
                         <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
                                     class="btn__icon btn__icon_reverse">.</span></a>
                     </div>
                     <div class="novetly-slider__item">
-                        <div class="novelty-slider__picture">
+                        <a class="novelty-slider__picture" href="#">
 								<span class="novelty-slider__round">
 									<span class="nov-sl__line1">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png" alt="">
@@ -269,13 +269,13 @@
 									</span>
 								</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide2.png" alt="">
-                        </div>
-                        <div class="novetly-slider__text">Волк</div>
+                        </a>
+                        <a class="novetly-slider__text" href="#">Волк</a>
                         <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
                                     class="btn__icon btn__icon_reverse">.</span></a>
                     </div>
                     <div class="novetly-slider__item">
-                        <div class="novelty-slider__picture">
+                        <a class="novelty-slider__picture" href="#">
 								<span class="novelty-slider__round">
 									<span class="nov-sl__line1">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png" alt="">
@@ -285,13 +285,13 @@
 									</span>
 								</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide3.png" alt="">
-                        </div>
-                        <div class="novetly-slider__text">Дракон Spyro</div>
+                        </a>
+                        <a class="novetly-slider__text" href="#">Дракон Spyro</a>
                         <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
                                     class="btn__icon btn__icon_reverse">.</span></a>
                     </div>
                     <div class="novetly-slider__item">
-                        <div class="novelty-slider__picture">
+                        <a class="novelty-slider__picture" href="#">
 								<span class="novelty-slider__round">
 									<span class="nov-sl__line1">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png" alt="">
@@ -301,8 +301,8 @@
 									</span>
 								</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide1.png" alt="">
-                        </div>
-                        <div class="novetly-slider__text">Дракон Spyro</div>
+                        </a>
+                        <a class="novetly-slider__text" href="#">Дракон Spyro</a>
                         <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
                                     class="btn__icon btn__icon_reverse">.</span></a>
                     </div>
