@@ -12,18 +12,20 @@ get_template_part('tpl-part/head');
 		<!-- BEGIN CONTENT -->
 
 		<main class="content">
+
 			<section class="blog-section blog-section_feedback">
-				<div class="blog-section__top">
+				<div class="blog-section__top" style="background-image:url('<?php echo get_field('banner_img')['url']; ?>')">
 					<div class="feedback-bg">
-						<img src="img/delivery-main-1.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-main-1.png" alt="">
 					</div>
 					<div class="blog-top__wrap">
 						<h1 class="blog-top__title">
-							Доставка
-						</h1>
+                            <?php the_title(); ?>
+                        </h1>
 					</div>
 				</div>
 			</section>
+
 			<section class="box-delivery-time">
 				<div class="wrapper">
 					<div class="box-delivery-time__wrap">
@@ -46,24 +48,20 @@ get_template_part('tpl-part/head');
 										<div class="delivery-time-list__text delivery-time-list__text_3">- доставка почтой в любую точку мира.</div>
 										<div class="delivery-town-wrap">
 											<h2 class="h2 h2_pink"><span class="h2__icon">ч</span>Примерные сроки доставки<span class="h2__icon h2__icon_reverse">ч</span></h2>
-											<div class="delivery-town">
-												<div class="delivery-town__header">
-													<div class="col col_1">Город</div>
-													<div class="col col_2">Срок</div>
-												</div>
+											<?php if( get_field('table_add') ): ?>
+                                            <div class="delivery-town">
+                                                <div class="delivery-town__header">
+                                                    <div class="col col_1">Город</div>
+                                                    <div class="col col_2">Срок</div>
+                                                </div>
+                                                <?php while( has_sub_field('table_add') ): ?>
 												<div class="delivery-town__row">
-													<div class="col col_1">Санкт-Петербург </div>
-													<div class="col col_2">1 неделя</div>
+													<div class="col col_1"><?php the_sub_field('city'); ?></div>
+													<div class="col col_2"><?php the_sub_field('line'); ?></div>
 												</div>
-												<div class="delivery-town__row">
-													<div class="col col_1">Берлин </div>
-													<div class="col col_2">2 недели</div>
-												</div>
-												<div class="delivery-town__row">
-													<div class="col col_1">Хельсинки</div>
-													<div class="col col_2">4 недели</div>
-												</div>
+												<?php endwhile; ?>
 											</div>
+											<?php endif; ?>
 										</div>
 									</li>
 								</ul>
