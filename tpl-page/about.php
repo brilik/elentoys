@@ -12,20 +12,23 @@ get_template_part('tpl-part/head');
 
         <main class="content">
             <section class="about-section">
-                <div class="blog-section__top" data-mob-href="img/slide-with-bg.jpg" data-tab-href="img/slide-with-bg-tab.jpg">
+                <div class="blog-section__top"
+                     style="background-image: url(<?php the_field('banner_img'); ?>)"
+                     data-mob-href="<?php the_field('banner_img_mob'); ?>"
+                     data-tab-href="<?php the_field('banner_img_tab'); ?>">
                     <div class="blog-top__wrap">
                         <h1 class="blog-top__title">
-                            Обо мне
+                            <?php the_title(); ?>
                         </h1>
                     </div>
                 </div>
-
             </section>
+
             <div class="about-section__author">
                 <div class="wrapper">
                     <div class="about-author__box">
                         <div class="about-author__img">
-                            <img src="img/about-1.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-1.png" alt="">
                         </div>
                         <div class="about-author__description">
                             <div class="about-author__name">
@@ -44,6 +47,7 @@ get_template_part('tpl-part/head');
                     </div>
                 </div>
             </div>
+
             <section class="about-section__situation">
                 <div class="wrapper">
 
@@ -76,36 +80,35 @@ get_template_part('tpl-part/head');
 
                         </div>
                         <div class="about-situation__img">
-                            <img src="img/img5.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img5.png" alt="">
                         </div>
                     </div>
                 </div>
-
-
             </section>
-            <section class="about-section__seven" data-mob-href="img/slide-with-bg.jpg" data-tab-href="img/slide-with-bg.jpg">
+
+            <?php $left = get_field('left'); ?>
+            <?php $right = get_field('right'); ?>
+            <section class="about-section__seven"
+                     style="background-image: url(<?php echo $left['4_img']; ?>)"
+                     data-mob-href="<?php echo $left['4_img_mob']; ?>"
+                     data-tab-href="<?php echo $left['4_img_tab']; ?>">
                 <div class="wrapper">
                     <h2 class="h2 h2_pink">
                         <span class="h2__icon">ч</span>
-                        <span class="about-name">
-                            Семь раз отмерь -
-                            <span>
-                                и в плюшевый бой!
-                            </span>
-                        </span>
+                        <span class="about-name"><?php echo $right['title']; ?></span>
                         <span class="h2__icon h2__icon_reverse">ч</span>
                     </h2>
                     <div class="about-seven__text">
-                        <p>Чтобы точно соблюсти размеры и пропорции персонажа, мне на помощь приходит мой волшебный сантиметр. </p>
-                        <p>А в случае сложных выкроек, он придает мне необходимый воинственный настрой.</p>
+                        <?php echo $right['desc']; ?>
                     </div>
                 </div>
             </section>
+
             <section class="about-section__slice">
                 <div class="wrapper">
                     <div class="about-slice__box">
                        <div class="about-slice__dog">
-                           <img src="img/dog.png" alt="">
+                           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dog.png" alt="">
                            
                        </div>
                         <div class="about-slice__text">
@@ -122,9 +125,9 @@ get_template_part('tpl-part/head');
                         </div>
 
                         <div class="about-author__img">
-                            <img src="img/slice.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slice.png" alt="">
                             <div class="about-slice__pic">
-                               <img src="img/buttons.png" alt="">
+                               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/buttons.png" alt="">
                            </div>
                         </div>
                     </div>
@@ -133,6 +136,7 @@ get_template_part('tpl-part/head');
                
                 </div>
             </section>
+
             <section class="about-section__favorite">
                 <div class="wrapper">
                     <h2 class="h2 h2_pink">
@@ -150,43 +154,40 @@ get_template_part('tpl-part/head');
                     </div>
                     <div class="about-favorite__wrap">
                         <div class="about-favorite__img">
-                        <img src="img/gir.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gir.png" alt="">
                         </div>
                     </div>
                     
                 </div>
             </section>
-            <section class="about-section__eye">
+
+            <?php $left = get_field('7_left'); ?>
+            <?php $right = get_field('7_right'); ?>
+            <section class="about-section__eye"
+                     style="background-image: url(<?php echo $left['img']; ?>)"
+                     data-mob-href="<?php echo $left['img_mob']; ?>"
+                     data-tab-href="<?php echo $left['img_tab']; ?>">
                 <div class="wrapper">
                     <div class="about-eye__box">
                         <div class="about-eye__img">
-                            <img src="img/img12.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img12.png" alt="">
                         </div>
                         <div class="about-eye__description">
                             <h2 class="h2 h2_pink">
                                 <span class="h2__icon">ч</span>
-                                <span class="about-name">
-                                    Эти глаза <br>
-напротив
-
-                                </span>
+                                <span class="about-name"><?php echo $right['title']; ?></span>
                                 <span class="h2__icon h2__icon_reverse">ч</span>
                             </h2>
-                            <p>
-                                После того, как игрушка получила форму и объем
-я приступаю к созданию эмоции. 
-
-                            </p>
-                            <p>Здесь немаловажную роль играет выражение глаз.</p>
+                            <?php $right['desc']; ?>
                             <ul class="about-eye__list">
                                 <li class="about-eye__item">
-                                    <img src="img/img9.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img9.png" alt="">
                                 </li>
                                 <li class="about-eye__item">
-                                    <img src="img/img10.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img10.png" alt="">
                                 </li>
                                 <li class="about-eye__item">
-                                    <img src="img/img11.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img11.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -196,7 +197,7 @@ get_template_part('tpl-part/head');
             <section class="about-section__detail">
                 <div class="wrapper">
                     <div class="about-detail__pict">
-                        <img src="img/img16.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img16.png" alt="">
                     </div>
                     <div class="about-detail__box">
                         <div class="about-detail__description">
@@ -214,20 +215,20 @@ get_template_part('tpl-part/head');
                             </p>
                             <ul class="about-detail__list">
                                 <li class="about-detail__item">
-                                    <img src="img/img17.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img17.png" alt="">
                                 </li>
                                 <li class="about-detail__item">
-                                    <img src="img/img18.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img18.png" alt="">
                                 </li>
                                 <li class="about-detail__item">
-                                    <img src="img/img19.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img19.png" alt="">
                                 </li>
                             </ul>
                         </div>
                         <div class="about-detail__img">
-                            <img src="img/img15.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img15.png" alt="">
                             <div class="about-detail__pic">
-                                <img src="img/bt.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bt.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -248,13 +249,13 @@ get_template_part('tpl-part/head');
                    </p>
                    <ul class="about-section__list">
                        <li class="about-section__item">
-                           <img src="img/img20.png" alt="">
+                           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img20.png" alt="">
                        </li>
                        <li class="about-section__item">
-                           <img src="img/img21.png" alt="">
+                           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img21.png" alt="">
                        </li>
                        <li class="about-section__item">
-                           <img src="img/img22.png" alt="">
+                           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img22.png" alt="">
                        </li>
                    </ul>
                 </div>
