@@ -30,7 +30,7 @@ get_template_part('tpl-part/head');
 				<div class="wrapper">
 					<div class="box-delivery-time__wrap">
 						<div class="box-delivery-time__img">
-							<img src="img/delivery-time-1.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-time-1.png" alt="">
 						</div>
 						<div class="box-delivery-time__info">
 							<div class="delivery-time-list-wrap">
@@ -41,7 +41,7 @@ get_template_part('tpl-part/head');
 									<li class="delivery-time-list__item">
 										<div class="delivery-time-list__text"> - сроки шитья игрушки зависят от сложности персонажа</div>
 										<div class="delivery-time-list__img">
-											<img src="img/delivery-time-3.png" alt="">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-time-3.png" alt="">
 										</div>
 									</li>
 									<li class="delivery-time-list__item">
@@ -77,11 +77,11 @@ get_template_part('tpl-part/head');
 						<div class="box-feedback-toy__info">
 							<span>Игрушки доставляются в оригинальных и вместительных рюкзаках с лототипом. <br> Сумки изготовлены из Спанбонда. Материал прочен, что позволяет использовать изделия из него очень долго. </span>
 							<div class="box-feedback-toy__info-img">
-								<img src="img/delivery-toy-1.png" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-toy-1.png" alt="">
 							</div>
 						</div>
 						<div class="box-feedback-toy__img">
-							<img src="img/delivery-toy-bg.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-toy-bg.png" alt="">
 						</div>
 					</div>
 				</div>
