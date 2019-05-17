@@ -8,7 +8,7 @@
     <title><?php bloginfo('title'); ?> | <?php echo bloginfo('description'); ?></title>
     <meta name='description' content=""/>
     <meta name="keywords" content=""/>
-    <link rel="icon" type="image/x-icon" href="favicon.png"/>
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">

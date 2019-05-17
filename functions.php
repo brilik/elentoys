@@ -48,6 +48,18 @@ if (!function_exists('elentoys_setup')) :
 
         // Add thumbnail for post and post type toys
         add_theme_support( 'post-thumbnails', array( 'post', 'toys' ) );
+
+        // remove gravatar data. Off
+        add_filter ('get_avatar_data', 'del_avatar_data', 10, 2);
+        function del_avatar_data ($args, $id_or_email) {
+            return false;
+        }
+
+        // remove gravatar url. Off
+        add_filter ('get_avatar_url', 'del_avatar_url', 10, 3);
+        function del_avatar_url ($url, $id_or_email, $args) {
+            return false;
+        }
     }
 endif;
 add_action('after_setup_theme', 'elentoys_setup');
