@@ -4,6 +4,11 @@
  */
 
 get_template_part('tpl-part/head');
+
+global $posts, $post;
+
+$post_type = 'toys';
+$tax_type = 'toys_category';
 ?>
 
     <div class="main-wrapper main-page">
@@ -11,6 +16,7 @@ get_template_part('tpl-part/head');
     <!-- BEGIN CONTENT -->
 
     <main class="content">
+
         <section class="section section_main">
             <div class="main-slider js-main-slider">
 
@@ -126,45 +132,33 @@ get_template_part('tpl-part/head');
         <section class="section section_category">
             <div class="wrapper">
                 <h2 class="h2 h2_pink"><span class="h2__icon">ч</span>Категории игрушек<span
-                            class="h2__icon h2__icon_reverse">ч</span></h2>
-                <div class="categories">
-                    <a href="#" class="categories__item">
-                        <div class="categories-item__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/category-1.png" alt=""
-                                 class="categories__img">
-                        </div>
+                            class="h2__icon h2__icon_reverse">ч</span>
+                </h2>
+                <?php
+                $count = get_field('category_count');
+                $categories = get_terms($tax_type, "orderby=name&hide_empty=0&number=$count&parent=0");
 
-                        <div class="categories__text">Мемы</div>
-                    </a>
-                    <a href="#" class="categories__item">
-                        <div class="categories-item__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/category-2.png" alt=""
-                                 class="categories__img">
-                        </div>
-                        <div class="categories__text">Для поклонников<br>мультфильмов</div>
-                    </a>
-                    <a href="#" class="categories__item">
-                        <div class="categories-item__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/category-3.png" alt=""
-                                 class="categories__img">
-                        </div>
-                        <div class="categories__text">Аксессуары</div>
-                    </a>
-                    <a href="#" class="categories__item">
-                        <div class="categories-item__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/category-4.png" alt=""
-                                 class="categories__img">
-                        </div>
-                        <div class="categories__text">Оригинальные</div>
-                    </a>
-                    <a href="#" class="categories__item">
-                        <div class="categories-item__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/category-5.png" alt=""
-                                 class="categories__img">
-                        </div>
-                        <div class="categories__text">Для поклонников<br>видеоигр</div>
-                    </a>
-                </div>
+                if ($categories) {
+
+                    echo '<div class="categories">';
+
+                    foreach ($categories as $cat) {
+
+                        $term = get_queried_object();
+                        $image = get_field('img', $term);
+                        $image = get_field('img', $cat->taxonomy . '_' . $cat->term_id);
+
+                        echo '<a href="' . get_term_link($cat->term_taxonomy_id, $tax_type) . '" class="categories__item">
+                            <div class="categories-item__pict">
+                                <img src="' . $image['url'] . '" alt="' . $image['alt'] . '"
+                                     class="categories__img">
+                            </div>
+                            <div class="categories__text">' . $cat->name . '</div>
+                        </a>';
+                    }
+                    echo '</div>';
+                }
+                ?>
             </div>
         </section>
 
@@ -178,13 +172,16 @@ get_template_part('tpl-part/head');
                 </div>
                 <div class="new-section__box">
                     <div class="new-section__img img1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-img2.png" alt="">
+                        <img src="<?php echo get_field('author_img_left')['url']; ?>"
+                             alt="<?php echo get_field('author_img_left')['alt']; ?>">
                     </div>
                     <div class="new-section__img img2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-img1.png" alt="">
+                        <img src="<?php echo get_field('author_img_center')['url']; ?>"
+                             alt="<?php echo get_field('author_img_center')['alt']; ?>">
                     </div>
                     <div class="new-section__img img3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-img3.png" alt="">
+                        <img src="<?php echo get_field('author_img_right')['url']; ?>"
+                             alt="<?php echo get_field('author_img_right')['alt']; ?>">
                     </div>
                 </div>
             </div>
@@ -192,87 +189,47 @@ get_template_part('tpl-part/head');
 
         <section class="section section_novelty">
             <div class="wrapper">
-                <h2 class="h2 h2_pink"><span class="h2__icon">ч</span>Новинки<span
-                            class="h2__icon h2__icon_reverse">ч</span></h2>
+                <h2 class="h2 h2_pink">
+                    <span class="h2__icon">ч</span>Новинки<span class="h2__icon h2__icon_reverse">ч</span>
+                </h2>
                 <div class="novetly-slider js-novetly-slider">
-                    <div class="novetly-slider__item">
-                        <a class="novelty-slider__picture" href="#">
-								<span class="novelty-slider__round">
-									<span class="nov-sl__line1">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png"
-                                             alt="">
-									</span>
-									<span class="nov-sl__line2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide2.png"
-                                             alt="">
-									</span>
-								</span>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide1.png" alt="">
-                        </a>
-                        <a class="novetly-slider__text" href="#">Миньон</a>
-                        <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
-                                    class="btn__icon btn__icon_reverse">.</span></a>
-                    </div>
-                    <div class="novetly-slider__item">
-                        <a class="novelty-slider__picture" href="#">
-								<span class="novelty-slider__round">
-									<span class="nov-sl__line1">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png"
-                                             alt="">
-									</span>
-									<span class="nov-sl__line2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide2.png"
-                                             alt="">
-									</span>
-								</span>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide2.png" alt="">
-                        </a>
-                        <a class="novetly-slider__text" href="#">Волк</a>
-                        <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
-                                    class="btn__icon btn__icon_reverse">.</span></a>
-                    </div>
-                    <div class="novetly-slider__item">
-                        <a class="novelty-slider__picture" href="#">
-								<span class="novelty-slider__round">
-									<span class="nov-sl__line1">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png"
-                                             alt="">
-									</span>
-									<span class="nov-sl__line2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide2.png"
-                                             alt="">
-									</span>
-								</span>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide3.png" alt="">
-                        </a>
-                        <a class="novetly-slider__text" href="#">Дракон Spyro</a>
-                        <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
-                                    class="btn__icon btn__icon_reverse">.</span></a>
-                    </div>
-                    <div class="novetly-slider__item">
-                        <a class="novelty-slider__picture" href="#">
-								<span class="novelty-slider__round">
-									<span class="nov-sl__line1">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png"
-                                             alt="">
-									</span>
-									<span class="nov-sl__line2">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide2.png"
-                                             alt="">
-									</span>
-								</span>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/slide1.png" alt="">
-                        </a>
-                        <a class="novetly-slider__text" href="#">Дракон Spyro</a>
-                        <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
-                                    class="btn__icon btn__icon_reverse">.</span></a>
-                    </div>
+                    <?php
+                    $posts = get_posts(array(
+                        'numberposts' => get_field('new_count'),
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                        'post_type' => $post_type,
+                        'suppress_filters' => true,
+                    ));
+
+                    foreach ($posts as $post) {
+                        setup_postdata($post); ?>
+                        <div class="novetly-slider__item">
+                            <a class="novelty-slider__picture" href="<?php the_permalink(); ?>">
+                            <span class="novelty-slider__round">
+                                <span class="nov-sl__line1">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide.png"
+                                         alt="">
+                                </span>
+                                <span class="nov-sl__line2">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slide/el-slide2.png"
+                                         alt="">
+                                </span>
+                            </span>
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                            </a>
+                            <a class="novetly-slider__text" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <a href="<?php the_permalink(); ?>" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
+                                        class="btn__icon btn__icon_reverse">.</span></a>
+                        </div>
+                    <?php }
+                    wp_reset_postdata(); ?>
                 </div>
-                <!--					<a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span class="btn__icon btn__icon_reverse">.</span></a>-->
             </div>
         </section>
 
-        <section class="section section_form section_form-2">
+        <section class="section section_form section_form-2"
+                 style="background-image:url(<?php echo get_field('how_buy_background')['url']; ?>)">
             <div class="wrapper">
                 <h2 class="h2 h2_black">Остались вопросы?</h2>
                 <div class="h2-descr"><span class="h2__icon">Ч</span>Как заказать игрушку?<span
@@ -305,9 +262,9 @@ get_template_part('tpl-part/head');
                                     <div></div>
                                 </div>
                             </div>
-                            <div class="new-chat__btn2"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/assets/img/chat-teleg.png"
-                                        alt=""></div>
+                            <div class="new-chat__btn2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/chat-teleg.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="new-arrow__img">
@@ -315,32 +272,7 @@ get_template_part('tpl-part/head');
                     </div>
                     <div class="new-soc__box">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-order-img.png" alt="">
-                        <ul class="new-soc__list">
-                            <li class="new-soc__item item1">
-                                <a href="#" class="new-soc__link">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/vk2.svg"
-                                         alt="">
-                                </a>
-                            </li>
-                            <li class="new-soc__item item2">
-                                <a href="#" class="new-soc__link">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/telegram2.svg"
-                                         alt="">
-                                </a>
-                            </li>
-                            <li class="new-soc__item item3">
-                                <a href="#" class="new-soc__link">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/fb2.svg"
-                                         alt="">
-                                </a>
-                            </li>
-                            <li class="new-soc__item item4">
-                                <a href="#" class="new-soc__link">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/inst2.svg"
-                                         alt="">
-                                </a>
-                            </li>
-                        </ul>
+                        <?php elentoys_the_social('new-soc__list', 2); ?>
                     </div>
                 </div>
             </div>
@@ -352,47 +284,26 @@ get_template_part('tpl-part/head');
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
                 <div class="h2-descr">авторских игрушек на заказ</div>
                 <div class="advantages-slider js-advantages-slider">
-                    <div class="advantages-slider__item">
-                        <div class="advantages-slider__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages-3.png" alt=""
-                                 class="advantages-slider__img">
-                        </div>
-                        <div class="advantages-slider__text"><span class="nav__icon">У</span>Детализация игрушки<span
-                                    class="nav__icon">У</span></div>
-                    </div>
-                    <div class="advantages-slider__item">
-                        <div class="advantages-slider__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages-1.png" alt=""
-                                 class="advantages-slider__img">
-                        </div>
-                        <div class="advantages-slider__text"><span class="nav__icon">У</span>Эксклюзивный стиль<span
-                                    class="nav__icon">У</span></div>
-                    </div>
-                    <div class="advantages-slider__item">
-                        <div class="advantages-slider__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages-2.png" alt=""
-                                 class="advantages-slider__img">
-                        </div>
-                        <div class="advantages-slider__text"><span class="nav__icon">У</span>Экологически чистые
-                            материалы<span class="nav__icon">У</span></div>
-                    </div>
+                    <?php
+                    if (get_field('advantages_slider_add')):
 
-                    <div class="advantages-slider__item">
-                        <div class="advantages-slider__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages-4.png" alt=""
-                                 class="advantages-slider__img">
+                        while (has_sub_field('advantages_slider_add')) { ?>
+                            <div class="advantages-slider__item">
+                                <div class="advantages-slider__pict">
+                                    <img src="<?php echo get_sub_field('img')['url']; ?>"
+                                         alt="<?php echo get_sub_field('img')['alt']; ?>"
+                                         class="advantages-slider__img">
+                                </div>
+                                <div class="advantages-slider__text">
+                                    <span class="nav__icon">У</span>
+                                    <?php the_sub_field('text'); ?>
+                                    <span class="nav__icon">У</span>
+                                </div>
                         </div>
-                        <div class="advantages-slider__text"><span class="nav__icon">У</span>Ручная работа<span
-                                    class="nav__icon">У</span></div>
-                    </div>
-                    <div class="advantages-slider__item advantages-slider__item_last">
-                        <div class="advantages-slider__pict">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages-5.png" alt=""
-                                 class="advantages-slider__img">
-                        </div>
-                        <div class="advantages-slider__text"><span class="nav__icon">У</span>Схожесть с персонажем<span
-                                    class="nav__icon">У</span></div>
-                    </div>
+                        <?php }
+
+                    endif;
+                    ?>
                 </div>
                 <div class="advantages-slider__buttons"></div>
                 <div class="advantages-slider__clips"></div>
@@ -405,19 +316,14 @@ get_template_part('tpl-part/head');
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
                 <div class="about-me">
                     <div class="about-me__photo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-me-photo.png" alt="">
+                        <img src="<?php echo get_field('about_photo')['url']; ?>"
+                             alt="<?php echo get_field('about_photo')['url']; ?>">
                     </div>
+                    <?php $block = get_field('about_right'); ?>
                     <div class="about-me__container">
-                        <div class="about-me__title">Каждая сшитая мной игрушка —<br> сделана с любовью для Вас!</div>
-                        <div class="about-me__text">
-                            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
-                                является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий
-                                безымянный печатник создал большую коллекцию размеров и форм
-                                шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-                            <p>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул
-                                в электронный дизайн. </p>
-                        </div>
-                        <div class="about-me__signature">С ув. ваша Елена Алексеева !</div>
+                        <div class="about-me__title"><?php echo $block['title']; ?></div>
+                        <div class="about-me__text"><?php echo $block['desc']; ?></div>
+                        <div class="about-me__signature"><?php echo $block['sender']; ?></div>
                     </div>
                 </div>
             </div>
@@ -429,43 +335,34 @@ get_template_part('tpl-part/head');
                 <h2 class="h2 h2_pink"><span class="h2__icon">Ч</span>Новости<span
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
                 <div class="news">
-                    <a href="#" class="news__item">
+                <?php
+                $posts = get_posts(array(
+                    'numberposts' => get_field('news_count'),
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'suppress_filters' => true,
+                ));
+
+                foreach ($posts as $post) {
+                    setup_postdata($post); ?>
+                    <a href="<?php the_permalink(); ?>" class="news__item">
                         <div class="news__photo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-1.png" alt="">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                         </div>
-                        <div class="news__title">Лучший подарок - плюшевый.</div>
-                        <div class="news__date">25. 12. 2018</div>
-                        <div class="news__text">Идеальный подарок для людей всех возрастов. Персонаж из любимой игры или
-                            мультипликационный герой неожиданно рядом.
-                        </div>
+                        <div class="news__title"><?php the_title(); ?></div>
+                        <div class="news__date"><?php the_date('d. m. Y'); ?></div>
+                        <div class="news__text"><?php the_content(); ?></div>
                     </a>
-                    <a href="#" class="news__item">
-                        <div class="news__photo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-2.png" alt="">
-                        </div>
-                        <div class="news__title">Игрушки — лучшие друзья!</div>
-                        <div class="news__date">25. 12. 2018</div>
-                        <div class="news__text">Превратите рисунки вашего ребенка в лучшего плюшевого друга! Это не
-                            только оживит воображение, но и позволит обнять любимого персонажа.
-                        </div>
-                    </a>
-                    <a href="#" class="news__item">
-                        <div class="news__photo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-3.png" alt="">
-                        </div>
-                        <div class="news__title">Экологически чистые материалы</div>
-                        <div class="news__date">25. 12. 2018</div>
-                        <div class="news__text">Мягкие и приятные на ощупь ткани с воздушным наполнителем внутри, ведь
-                            игрушка это не только эстетическое наслаждение но и предмет комфорта.
-                        </div>
-                    </a>
+                <?php }
+                wp_reset_postdata(); ?>
                 </div>
                 <div class="news__btn">
-                    <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Все новости<span
+                    <a href="<?php the_permalink(27); ?>" class="btn btn_pink"><span class="btn__icon">.</span>Все новости<span
                                 class="btn__icon btn__icon_reverse">.</span></a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- CONTENT EOF   -->

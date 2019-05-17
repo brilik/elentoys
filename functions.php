@@ -26,7 +26,6 @@ if (!function_exists('elentoys_setup')) :
         add_filter('body_class', 'elentoys_class_names');
         function elentoys_class_names($classes)
         {
-
             $classes[] = 'loaded';
 
             return $classes;
@@ -46,6 +45,9 @@ if (!function_exists('elentoys_setup')) :
             wp_enqueue_script('components-jquery.fancybox', get_template_directory_uri() . '/assets/js/components/jquery.fancybox.min.js', array(), false, true);
             wp_enqueue_script('script-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), false, true);
         }
+
+        // Add thumbnail for post and post type toys
+        add_theme_support( 'post-thumbnails', array( 'post', 'toys' ) );
     }
 endif;
 add_action('after_setup_theme', 'elentoys_setup');
@@ -128,3 +130,8 @@ require get_template_directory() . '/inc/item_menu.php';
  * Add item menu.
  */
 require get_template_directory() . '/tpl-part/social.php';
+
+/**
+ * Register custom post type Toys
+ */
+require get_template_directory() . '/inc/post_type.php';
