@@ -23,4 +23,11 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title' 	=> 'Подвал',
         'parent_slug' 	=> $parent['menu_slug'],
     ));
+    // add sub page
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Настройка 404 страницы',
+        'menu_slug'	  	=> 'theme-404-settings',
+        'menu_title' 	=> '404',
+        'parent_slug' 	=> $parent['menu_slug'],
+    ));
 }

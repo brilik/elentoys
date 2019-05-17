@@ -122,7 +122,7 @@ function elentoys_menu($menu_name)
 
 
 /**
- * Add item menu.
+ * Add item menu - advanced.
  */
 require get_template_directory() . '/inc/item_menu.php';
 
