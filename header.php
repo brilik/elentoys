@@ -11,7 +11,7 @@
 
             <?php elentoys_the_social('social-header'); ?>
 
-            <a href="#" class="logo logo_header">
+            <a href="<?php echo home_url(); ?>" class="logo logo_header">
 						<span class="animal-imgs">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo-0.svg" alt="" class="animal-img animal-img-1">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo-1.svg" alt="" class="animal-img animal-img-2">

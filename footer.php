@@ -8,7 +8,7 @@
                             <span>Handmade toys 2019</span>
                         </div>
         -->
-        <a href="#" class="logo logo_footer">
+        <a href="<?php echo home_url(); ?>" class="logo logo_footer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
         </a>
         <!--
