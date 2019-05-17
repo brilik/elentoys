@@ -60,6 +60,12 @@ if (!function_exists('elentoys_setup')) :
         function del_avatar_url ($url, $id_or_email, $args) {
             return false;
         }
+
+        // remove gravatar url. Off
+        function gravatar_desabler( $url, $id_or_email, $args){
+            return $args['default'];
+        }
+        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
     }
 endif;
 add_action('after_setup_theme', 'elentoys_setup');
