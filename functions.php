@@ -61,11 +61,20 @@ if (!function_exists('elentoys_setup')) :
             return false;
         }
 
+        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
         // remove gravatar url. Off
         function gravatar_desabler( $url, $id_or_email, $args){
             return $args['default'];
         }
-        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
+
+        // Filter. If has children - add class.
+        add_filter( 'category_css_class', 'add_category_parent_css', 10, 4);
+        function add_category_parent_css($css_classes, $category, $depth, $args){
+            if($args['has_children']){
+                $css_classes[] = 'with-subitem';
+            }
+            return $css_classes;
+        }
     }
 endif;
 add_action('after_setup_theme', 'elentoys_setup');

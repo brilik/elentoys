@@ -1,18 +1,19 @@
 <?php
 /**
- * Template Name: Категории
+ * Template Name: Категорий
  */
 
 get_template_part('tpl-part/head');
 ?>
 
-<div class="main-wrapper blog-wrapper">
+    <div class="main-wrapper blog-wrapper">
 
     <!-- BEGIN CONTENT -->
 
     <main class="content">
         <section class="blog-section blog-section_category">
-            <div class="blog-section__top" data-mob-href="img/slide-with-bg.jpg" data-tab-href="img/slide-with-bg-tab.jpg">
+            <div class="blog-section__top" data-mob-href="img/slide-with-bg.jpg"
+                 data-tab-href="img/slide-with-bg-tab.jpg">
                 <div class="blog-top__wrap">
                     <h1 class="blog-top__title">
                         Категории
@@ -27,86 +28,60 @@ get_template_part('tpl-part/head');
                             <div class="box-category__head">
                                 <h3 class="box-category__head-title">Категории</h3>
                             </div>
-                            <div class="box-category__content">
+                            <div class="box-category__content jsCategoryContent">
                                 <ul class="category-list">
-                                    <li class="category-list__item">
-                                        <a href="#" class="category-list__link">
-                                            Видеоигры
-                                        </a>
-                                    </li>
-                                    <li class="category-list__item with-subitem">
-                                        <span class="category-list__more"></span>
-                                        <a href="#" class="category-list__link">
-                                            Мультфильмы
-                                        </a>
-                                        <ul class="subitem-list">
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">Аниме</a>
-                                            </li>
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">Полнометражные</a>
-                                            </li>
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">Сериалы</a>
-                                            </li>
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">Советские</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="category-list__item">
-                                        <span class="category-list__more"></span>
-                                        <a href="#" class="category-list__link">
-                                            Мемы
-                                        </a>
-                                    </li>
-                                    <li class="category-list__item with-subitem">
-                                        <span class="category-list__more"></span>
-                                        <a href="#" class="category-list__link">
-                                            Оригинальные
-                                        </a>
-                                        <ul class="subitem-list">
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">По эскизу</a>
-                                            </li>
-                                            <li class="subitem-list__item">
-                                                <a href="#" class="subitem-list__link">Авторские</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="category-list__item">
-                                        <span class="category-list__more"></span>
-                                        <a href="#" class="category-list__link">
-                                            Аксессуары
-                                        </a>
-                                    </li>
+                                    <?php
+                                    $option = get_field('customCat');
+                                    $show_option_all = ( $option['show_option_all'] )? 'Перейти на главную' : '';
+                                    $orderby = $option['orderby'];
+                                    $order = $option['order'];
+                                    $show_count = $option['show_count'];
+                                    $hide_empty = $option['hide_empty'];
+                                    $args = array(
+                                        'type' => 'toys',
+                                        'taxonomy' => 'toys_category',
+                                        'show_option_all' => $show_option_all,
+                                        'title_li' => false,
+                                        'orderby' => $orderby,
+                                        'order' => $order,
+                                        'show_count' => $show_count,
+                                        'hide_empty' => $hide_empty,
+                                        'exclude_tree' => 7,
+                                        'hierarchical' => 1,
+                                        'echo' => 1,
+                                        'depth' => 0,
+                                    );
+                                    wp_list_categories($args);
+                                    ?>
                                 </ul>
                             </div>
                         </div>
+
+                        <!--
                         <div class="box-category-items">
                             <ul class="toys-list">
                                 <li class="toys-list__item">
 
-                                        <div class="toys-list__img">
-                                            <a href="#" class="toys-list__link"></a>
-                                            <img src="img/category/toy-1.png" alt="toy-image">
+                                    <div class="toys-list__img">
+                                        <a href="#" class="toys-list__link"></a>
+                                        <img src="img/category/toy-1.png" alt="toy-image">
+                                    </div>
+                                    <div class="toys-list__desc">
+                                        <div class="toys-list__desc-title">
+                                            <a href="#" class="name">Волк</a>
                                         </div>
-                                        <div class="toys-list__desc">
-                                            <div class="toys-list__desc-title">
-                                                <a href="#" class="name">Волк</a>
-                                            </div>
-                                            <div class="toys-list__desc-price">
-                                                2 000 <span>руб.</span>
-                                            </div>
-                                            <div class="toys-list__desc-more">
-                                                <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                    <span class="btn_text">Подробнее</span>
-                                                    <span
-                                                            class="btn__icon btn__icon_reverse">.</span></a>
-                                            </div>
+                                        <div class="toys-list__desc-price">
+                                            2 000 <span>руб.</span>
                                         </div>
-                                    <!--<div class="toys-list__info">-->
-                                    <!--</div>-->
+                                        <div class="toys-list__desc-more">
+                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
+                                                <span class="btn_text">Подробнее</span>
+                                                <span
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
+                                        </div>
+                                    </div>
+
+
                                 </li>
                                 <li class="toys-list__item">
                                     <div class="toys-list__img">
@@ -124,7 +99,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -144,7 +119,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -164,7 +139,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -184,7 +159,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -204,7 +179,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -224,7 +199,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -244,7 +219,7 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -264,12 +239,13 @@ get_template_part('tpl-part/head');
                                             <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
                                                 <span class="btn_text">Подробнее</span>
                                                 <span
-                                                        class="btn__icon btn__icon_reverse">.</span></a>
+                                                    class="btn__icon btn__icon_reverse">.</span></a>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>

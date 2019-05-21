@@ -372,3 +372,36 @@ var handler = function () {
 
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
+
+/** start
+ * FOR WORDPRESS
+ */
+
+    $(document).ready(function () {
+
+        var li = $('.box-category__content > ul > li');
+        var children = li.find('.children');
+        var childrenLink = children.find('a');
+        var like = '<span class="category-list__more"></span>';
+
+        li.each(function () {
+            $(this).addClass('category-list__item');
+            $(this).prepend(like);
+        });
+
+        $('.category-list__item > a').addClass('category-list__link');
+        children.addClass('subitem-list');
+
+        children.find('li').each(function () {
+            $(this).addClass('subitem-list__item');
+        });
+
+        childrenLink.each(function () {
+            $(this).addClass('subitem-list__link');
+        });
+
+    });
+
+/** end
+ * FOR WORDPRESS
+ */
