@@ -57,195 +57,54 @@ get_template_part('tpl-part/head');
                             </div>
                         </div>
 
-                        <!--
+
                         <div class="box-category-items">
-                            <ul class="toys-list">
-                                <li class="toys-list__item">
-
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-1.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Волк</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            2 000 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-
-
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-2.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Дракоша</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            1 880 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-3.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Медвеженок</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            3 200 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-4.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Миньйон</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            2 000 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-5.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Пони</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            1 880 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-6.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Крот</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            3 200 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-7.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Игрушка</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            2 000 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-8.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Игрушка</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            1 880 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="toys-list__item">
-                                    <div class="toys-list__img">
-                                        <a href="#" class="toys-list__link"></a>
-                                        <img src="img/category/toy-9.png" alt="toy-image">
-                                    </div>
-                                    <div class="toys-list__desc">
-                                        <div class="toys-list__desc-title">
-                                            <a href="#" class="name">Медвеженок</a>
-                                        </div>
-                                        <div class="toys-list__desc-price">
-                                            3 200 <span>руб.</span>
-                                        </div>
-                                        <div class="toys-list__desc-more">
-                                            <a href="#" class="btn btn_read btn_pink"><span class="btn__icon">.</span>
-                                                <span class="btn_text">Подробнее</span>
-                                                <span
-                                                    class="btn__icon btn__icon_reverse">.</span></a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <?php
+                            $posts = get_posts(array(
+                                'numberposts' => -1,
+                                'category' => 0,
+                                'orderby' => 'date',
+                                'order' => 'DESC',
+                                'include' => array(),
+                                'exclude' => array(),
+                                'meta_key' => '',
+                                'meta_value' => '',
+                                'post_type' => 'toys',
+                                'suppress_filters' => true,
+                            ));
+                            ?>
+                            <?php if ($posts) : ?>
+                                <ul class="toys-list">
+                                    <?php foreach ($posts as $post): setup_postdata($post); ?>
+                                        <li class="toys-list__item">
+                                            <div class="toys-list__img">
+                                                <a href="<?php the_permalink(); ?>" class="toys-list__link"></a>
+                                                <?php the_post_thumbnail(); ?>
+                                            </div>
+                                            <div class="toys-list__desc">
+                                                <div class="toys-list__desc-title">
+                                                    <a href="<?php the_permalink(); ?>"
+                                                       class="name"><?php echo $post->post_title; ?></a>
+                                                </div>
+                                                <div class="toys-list__desc-price">
+                                                    <?php the_field('price', get_the_ID()); ?>
+                                                    <span><?php the_field('val', get_the_ID()); ?></span>
+                                                </div>
+                                                <div class="toys-list__desc-more">
+                                                    <a href="<?php the_permalink(); ?>"
+                                                       class="btn btn_read btn_pink"><span class="btn__icon">.</span>
+                                                        <span class="btn_text">Подробнее</span>
+                                                        <span class="btn__icon btn__icon_reverse">.</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php endforeach;
+                                    wp_reset_postdata(); ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
-                        -->
+
                     </div>
                 </div>
             </div>
