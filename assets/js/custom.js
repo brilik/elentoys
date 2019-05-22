@@ -376,9 +376,8 @@ $(window).bind('resize', handler);
 /** start
  * FOR WORDPRESS
  */
-
-    $(document).ready(function () {
-
+    // customization filter category toys
+    function customCategoryFilter() {
         var li = $('.box-category__content > ul > li');
         var children = li.find('.children');
         var childrenLink = children.find('a');
@@ -399,7 +398,25 @@ $(window).bind('resize', handler);
         childrenLink.each(function () {
             $(this).addClass('subitem-list__link');
         });
+    }
 
+    // Find box where more two img and customization here
+    function findCountImgAndCustomImgOfContent(){
+        $('.note-section__img').each(function () {
+            let img = $(this).find('img');
+            let countImg = img.length;
+
+            if(countImg >= 2){
+                $(this).attr('class','note-section__box');
+                $(this).find('img').wrap('<div class="note-section__img">');
+            }
+        });
+    }
+
+    $(document).ready(function ()
+    {
+        customCategoryFilter();
+        findCountImgAndCustomImgOfContent();
     });
 
 /** end

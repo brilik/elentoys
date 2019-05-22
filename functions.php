@@ -43,6 +43,7 @@ if (!function_exists('elentoys_setup')) :
             wp_enqueue_script('jquery-migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-1.4.1.min.js', array(), false, true);
             wp_enqueue_script('components-slick', get_template_directory_uri() . '/assets/js/components/slick.js', array(), false, true);
             wp_enqueue_script('components-jquery.fancybox', get_template_directory_uri() . '/assets/js/components/jquery.fancybox.min.js', array(), false, true);
+            if( is_single() ) wp_enqueue_script('component-fotorama', get_template_directory_uri() . '/assets/js/components/fotorama.min.js', array(), false, true);
             wp_enqueue_script('script-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), false, true);
         }
 
@@ -61,8 +62,8 @@ if (!function_exists('elentoys_setup')) :
             return false;
         }
 
-        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
         // remove gravatar url. Off
+        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
         function gravatar_desabler( $url, $id_or_email, $args){
             return $args['default'];
         }
@@ -147,6 +148,20 @@ function elentoys_menu($menu_name)
     echo $menu_list;
 }
 
+/**
+ * Delivery string to word and add to array
+ *
+ * @param $text
+ * @param $word
+ * @param $part
+ */
+function elentoys_the_delivery_text($text, $word, $part){
+
+    $out = preg_split('/'.$word.'/', $text, null, PREG_SPLIT_NO_EMPTY);
+
+    echo $out[$part];
+}
+
 
 /**
  * Add item menu - advanced.
@@ -162,3 +177,8 @@ require get_template_directory() . '/tpl-part/social.php';
  * Register custom post type Toys
  */
 require get_template_directory() . '/inc/post_type.php';
+
+/**
+ * Function bredcrumbs
+ */
+require get_template_directory() . '/inc/breadcrumbs.php';
