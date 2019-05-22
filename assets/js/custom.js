@@ -413,10 +413,26 @@ $(window).bind('resize', handler);
         });
     }
 
+    function makeActiveCurCategory(){
+        var ul = $('.jsMakeActiveCategory');
+        var curCat = ul.data('cat');
+        var listCat = ul.find('li a');
+
+        listCat.each(function () {
+            let cur = $(this).text();
+
+            if( cur === curCat )
+                $(this).css('color','#e33576');
+
+        });
+
+    }
+
     $(document).ready(function ()
     {
         customCategoryFilter();
         findCountImgAndCustomImgOfContent();
+        makeActiveCurCategory();
     });
 
 /** end
