@@ -76,6 +76,12 @@ if (!function_exists('elentoys_setup')) :
             }
             return $css_classes;
         }
+
+        add_action('admin_menu', 'remove_admin_menu_links', 999);
+        function remove_admin_menu_links() {
+            remove_menu_page('edit-comments.php');
+            remove_menu_page( 'edit.php?post_type=acf-field-group' );
+        }
     }
 endif;
 add_action('after_setup_theme', 'elentoys_setup');
