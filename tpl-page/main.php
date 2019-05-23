@@ -351,7 +351,7 @@ $tax_type = 'toys_category';
                         </div>
                         <div class="news__title"><?php the_title(); ?></div>
                         <div class="news__date"><?php the_date('d. m. Y'); ?></div>
-                        <div class="news__text"><?php the_content(); ?></div>
+                        <div class="news__text"><?php the_excerpt(); ?></div>
                     </a>
                 <?php }
                 wp_reset_postdata(); ?>
