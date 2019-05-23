@@ -24,6 +24,8 @@ $args = array(
 $query = new WP_Query($args);
 ?>
 
+<div class="main-wrapper product-wrapper">
+
 <!-- BEGIN CONTENT -->
 
 <main class="content">
@@ -157,6 +159,8 @@ $query = new WP_Query($args);
 </main>
 
 <!-- CONTENT EOF   -->
+
+</div>
 
 <?php endwhile;
 
