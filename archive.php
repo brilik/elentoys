@@ -13,10 +13,7 @@
                  data-tab-href="img/slide-with-bg-tab.jpg">
                 <div class="blog-top__wrap">
                     <h1 class="blog-top__title">
-                        <!-- Категории-->
-                        <!--игрушек-->
-                        <?php //single_cat_title(); ?>
-                        <?php the_archive_title(); ?>
+                        <?php single_cat_title(); ?>
                     </h1>
                 </div>
             </div>
