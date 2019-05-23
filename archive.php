@@ -1,4 +1,26 @@
-<?php get_template_part('tpl-part/head'); global $post; ?>
+<?php get_template_part('tpl-part/head');
+
+global $post;
+// тут можно указать post_tag (подборка постов по схожим меткам) или даже массив array('category', 'post_tag') - подборка и по меткам и по категориям
+$related_tax = 'toys_category';
+
+// получаем ID всех элементов (категорий, меток или таксономий), к которым принадлежит текущий пост
+$cats_tags_or_taxes = wp_get_object_terms($post->ID, $related_tax, array('fields' => 'ids'));
+
+// массив параметров для WP_Query
+$args = array(
+    'posts_per_page' => 5, // сколько похожих постов нужно вывести,
+    'tax_query' => array(
+        array(
+            'taxonomy' => $related_tax,
+            'field' => 'id',
+            'include_children' => false, // нужно ли включать посты дочерних рубрик
+            'terms' => $cats_tags_or_taxes,
+            'operator' => 'IN' // если пост принадлежит хотя бы одной рубрике текущего поста, он будет отображаться в похожих записях, укажите значение AND и тогда похожие посты будут только те, которые принадлежат каждой рубрике текущего поста
+        )
+    )
+);
+$query = new WP_Query($args); ?>
 
     <!-- BEGIN BODY -->
 
@@ -95,6 +117,44 @@
             </div>
             <!--<div class="blog-section__img"><img src="img/blog11.png" alt=""></div>-->
         </section>
+
+        <?php if ($query->have_posts()) : ?>
+            <section class="section section_novelty">
+                <div class="wrapper">
+                    <h2 class="h2 h2_pink">
+                        <span class="h2__icon">ч</span>
+                        Рекомендованные
+                        <span class="h2__icon h2__icon_reverse">ч</span>
+                    </h2>
+                    <div class="novetly-slider js-novetly-slider">
+                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+                            <a href="<?php the_permalink($query->post->ID); ?>">
+                                <div class="novetly-slider__item">
+                                    <div class="novelty-slider__picture">
+                                        <span class="novelty-slider__round"></span>
+                                        <?php the_post_thumbnail($query->post->ID); ?>
+                                    </div>
+                                    <div class="novetly-slider__text">
+                                        <?php echo $query->post->post_title; ?>
+                                        /
+                                        <?php
+                                        $cur_terms = get_the_terms($query->post->ID, $related_tax);
+                                        if (is_array($cur_terms)) {
+                                            echo $cur_terms[0]->name;
+//                                            foreach( $cur_terms as $cur_term ){
+//                                                echo $cur_term->name . ' и ';
+//                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif;
+        wp_reset_postdata(); ?>
 
     </main>
 
