@@ -106,7 +106,7 @@ $query = new WP_Query($args);
                             <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
                                         class="btn__icon btn__icon_reverse">.</span></a>
                         </div>
-                        <?php elentoys_the_social('social social_product'); ?>
+                        <?php elentoys_the_social('social social_product', 0, array('telegram', 'inst', 'vk', 'viber')); ?>
                     </div>
                 </div>
             </div>

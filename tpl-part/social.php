@@ -1,6 +1,6 @@
 <?php
 
-function elentoys_the_social($ulClass, $isPopup = 0)
+function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 {
 
     $out = (string)'';
@@ -10,17 +10,17 @@ function elentoys_the_social($ulClass, $isPopup = 0)
 
         $out .= '<ul class="' . $ulClass . '">';
 
-        if($isPopup == 2) {
+        if ($isPopup == 2) {
 
-            while(has_sub_field('vertical', 'options')) {
+            while (has_sub_field('vertical', 'options')) {
 
-                $fileName = ( get_sub_field('icon') === 'whatsapp' )? 'wp' : get_sub_field('icon');
+                $fileName = (get_sub_field('icon') === 'whatsapp') ? 'wp' : get_sub_field('icon');
 
-                if( $fileName == 'twitter' || $fileName == 'skype' || $fileName == '' || $fileName == 'wp' || $fileName == 'viber' ) continue;
+                if ($fileName == 'twitter' || $fileName == 'skype' || $fileName == '' || $fileName == 'wp' || $fileName == 'viber') continue;
 
-                $out .= '<li class="new-soc__item item'.++$count.'">
-                                <a href="'.get_sub_field('link').'" class="new-soc__link">
-                                    <img src="'. get_template_directory_uri() .'/assets/img/social/'.$fileName.'2.svg"
+                $out .= '<li class="new-soc__item item' . ++$count . '">
+                                <a href="' . get_sub_field('link') . '" class="new-soc__link">
+                                    <img src="' . get_template_directory_uri() . '/assets/img/social/' . $fileName . '2.svg"
                                          alt="">
                                 </a>
                             </li>';
@@ -31,20 +31,29 @@ function elentoys_the_social($ulClass, $isPopup = 0)
 
             while (has_sub_field('vertical', 'options')) {
 
-                $fileName = ( get_sub_field('icon') === 'whatsapp' )? 'wp' : get_sub_field('icon');
+                $fileName = (get_sub_field('icon') === 'whatsapp') ? 'wp' : get_sub_field('icon');
                 $out .= '<li class="backcall-list__item">
-                    <a href="'.get_sub_field('link').'" class="backcall-list__link '.$fileName.'">
+                    <a href="' . get_sub_field('link') . '" class="backcall-list__link ' . $fileName . '">
                     <img src="' . get_template_directory_uri() . '/assets/img/social/' . $fileName . '.svg" alt=""></a></li>';
             }
 
-        } else {
+        } elseif ($isPopup === 0) {
 
-            while (has_sub_field('vertical', 'options')) {
+            if( $arrShow !== 0 ) {
 
-                $out .= '<li class="social__item">
-                    <a href="' . get_sub_field('link') . '" class="social__link">
-                    <i class="icon-' . get_sub_field('icon') . '"></i></a></li>';
+                $key = 0;
 
+                while (has_sub_field('vertical', 'options')) {
+
+                    $key = array_search(get_sub_field('icon'), $arrShow);
+
+                    if (false !== $key) {
+                        $out .= '<li class="social__item">
+                        <a href="' . get_sub_field('link') . '" class="social__link">
+                        <i class="icon-' . $arrShow[$key] . '"></i></a></li>';
+                    }
+
+                }
             }
         }
 
