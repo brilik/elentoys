@@ -36,15 +36,16 @@ $query = new WP_Query($args);
             <div class="product-section__wrapper">
                 <div class="product-section__box">
                     <div class="product-section__slider">
-                        <?php $slider = get_field('slider'); // print_r( $slider ); ?>
+                        <?php $slider = get_field('slider'); ?>
                         <?php if ($slider): ?>
-                            <ul class="product-slider__for product-slider__for-js ">
+                            <ul class="product-slider__for product-slider__for-js">
                                 <?php foreach ($slider as $item): ?>
                                     <li class="product-for__item">
                                         <div class="product-for__pict">
-                                            <a href="<?php echo $item->url; ?>" data-fancybox="images"
+                                            <a href="<?php echo $item['url']; ?>"
+                                               data-fancybox="images"
                                                class="product-for__link js-fancybox">
-                                                <img src="<?php echo $item->url; ?>" alt="">
+                                                <img src="<?php echo $item['url']; ?>" alt="">
                                             </a>
                                         </div>
                                     </li>
@@ -60,7 +61,7 @@ $query = new WP_Query($args);
                                     <?php foreach ($slider as $item): ?>
                                         <li class="slider-nav__item">
                                             <div class="slider-nav__pict">
-                                                <img src="<?php echo $item->url; ?>" alt="">
+                                                <img src="<?php echo $item['url']; ?>" alt="">
                                             </div>
                                         </li>
                                     <?php endforeach; ?>
