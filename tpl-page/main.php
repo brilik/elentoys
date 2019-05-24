@@ -164,8 +164,8 @@ $tax_type = 'toys_category';
 
         <section class="section new-section"
                  style="background-image:url(<?php echo get_field('bckgr_3')['url']; ?>)"
-                 data-mob-href="<?php echo get_field('bckgr_3')['bckgr_mob_3']; ?>"
-                 data-tab-href="<?php echo get_field('bckgr_3')['bckgr_tab_3']; ?>">
+                 data-mob-href="<?php echo get_field('bckgr_mob_3')['url']; ?>"
+                 data-tab-href="<?php echo get_field('bckgr_tab_3')['url']; ?>">
             <div class="wrapper">
                 <h2 class="h2 h2_black"><span class="h2__icon">Ч</span>Хотите авторскую игрушку<span
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
@@ -313,7 +313,10 @@ $tax_type = 'toys_category';
             </div>
         </section>
 
-        <section class="section section_about-me">
+        <section class="section section_about-me"
+                 style="background-image:url(<?php echo get_field('bckgr_7')['url']; ?>)"
+                 data-mob-href="<?php echo get_field('bckgr_mob_7')['url']; ?>"
+                 data-tab-href="<?php echo get_field('bckgr_tab_7')['url']; ?>">
             <div class="wrapper">
                 <h2 class="h2 h2_black"><span class="h2__icon">Ч</span>Обо мне<span
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
