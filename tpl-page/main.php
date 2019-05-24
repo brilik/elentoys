@@ -23,6 +23,7 @@ $tax_type = 'toys_category';
                 <?php
                 $section = get_field('slider_add');
 
+//                echo '<pre>'; print_r($section); echo '</pre>';
                 if ($section): $count = 0;
 
                     foreach ($section as $item): $count++;
@@ -36,7 +37,10 @@ $tax_type = 'toys_category';
                         $positionImg = $item['positionImg'];
                         $imgLeft = $item['imgLeft'];
                         $imgRight = $item['imgRight'];
-                        $imgBckgr = $item['bckgr'];
+
+                        $imgBckgr = ( $item['bckgr'] )? $item['bckgr'] : '';
+                        $imgBckgrMob = ( $item['bckgr_mob'] )? $item['bckgr_mob'] : '';
+                        $imgBckgrTab = ( $item['bckgr_tab'] )? $item['bckgr_tab'] : '';
 
                         $link['title'] = (!empty($item['link']['title'])) ? $item['link']['title'] : 'Подробнее';
                         $link['url'] = (!empty($item['link']['url'])) ? $item['link']['url'] : '#';
@@ -45,7 +49,10 @@ $tax_type = 'toys_category';
 
                         if ($item['position'] == 2) { ?>
 
-                            <div class="main-slider__item">
+                            <div class="main-slider__item main-slider__item_with-bg"
+                                 style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
+                                 data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
+                                 data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
                                         <img src="<?php echo $imgLeft['url'] ?>"
@@ -71,8 +78,8 @@ $tax_type = 'toys_category';
 
                             <div class="main-slider__item main-slider__item_with-bg"
                                  style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
-                                 data-mob-href="<?php echo $imgBckgr['bckgr_mob']; ?>"
-                                 data-tab-href="<?php echo $imgBckgr['bckgr_tab']; ?>">
+                                 data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
+                                 data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
                                         <h1 class="h1"><?php echo $title; ?></h1>
@@ -89,8 +96,8 @@ $tax_type = 'toys_category';
 
                             <div class="main-slider__item main-slider__item_slide-center main-slider__item_with-bg"
                                  style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
-                                 data-mob-href="<?php echo $imgBckgr['bckgr_mob']; ?>"
-                                 data-tab-href="<?php echo $imgBckgr['bckgr_tab']; ?>">
+                                 data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
+                                 data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
                                         <h1 class="h1"><?php echo $title; ?></h1>
@@ -107,8 +114,8 @@ $tax_type = 'toys_category';
 
                             <div class="main-slider__item main-slider__item_slide-center main-slider__item_with-bg"
                                  style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
-                                 data-mob-href="<?php echo $imgBckgr['bckgr_mob']; ?>"
-                                 data-tab-href="<?php echo $imgBckgr['bckgr_tab']; ?>">
+                                 data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
+                                 data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right center-mobile">
                                         <h1 class="h1"><?php echo $title; ?></h1>
