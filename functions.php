@@ -43,44 +43,57 @@ if (!function_exists('elentoys_setup')) :
             wp_enqueue_script('jquery-migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-1.4.1.min.js', array(), false, true);
             wp_enqueue_script('components-slick', get_template_directory_uri() . '/assets/js/components/slick.js', array(), false, true);
             wp_enqueue_script('components-jquery.fancybox', get_template_directory_uri() . '/assets/js/components/jquery.fancybox.min.js', array(), false, true);
-            if( is_single() ) wp_enqueue_script('component-fotorama', get_template_directory_uri() . '/assets/js/components/fotorama.min.js', array(), false, true);
+            if (is_single()) wp_enqueue_script('component-fotorama', get_template_directory_uri() . '/assets/js/components/fotorama.min.js', array(), false, true);
             wp_enqueue_script('script-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), false, true);
         }
 
         // Add thumbnail for post and post type toys
-        add_theme_support( 'post-thumbnails', array( 'post', 'toys' ) );
+        add_theme_support('post-thumbnails', array('post', 'toys'));
 
         // remove gravatar data. Off
-        add_filter ('get_avatar_data', 'del_avatar_data', 10, 2);
-        function del_avatar_data ($args, $id_or_email) {
+        add_filter('get_avatar_data', 'del_avatar_data', 10, 2);
+        function del_avatar_data($args, $id_or_email)
+        {
             return false;
         }
 
         // remove gravatar url. Off
-        add_filter ('get_avatar_url', 'del_avatar_url', 10, 3);
-        function del_avatar_url ($url, $id_or_email, $args) {
+        add_filter('get_avatar_url', 'del_avatar_url', 10, 3);
+        function del_avatar_url($url, $id_or_email, $args)
+        {
             return false;
         }
 
         // remove gravatar url. Off
-        add_filter('get_avatar_url', 'gravatar_desabler',10 ,3);
-        function gravatar_desabler( $url, $id_or_email, $args){
+        add_filter('get_avatar_url', 'gravatar_desabler', 10, 3);
+        function gravatar_desabler($url, $id_or_email, $args)
+        {
             return $args['default'];
         }
 
         // Filter. If has children - add class.
-        add_filter( 'category_css_class', 'add_category_parent_css', 10, 4);
-        function add_category_parent_css($css_classes, $category, $depth, $args){
-            if($args['has_children']){
+        add_filter('category_css_class', 'add_category_parent_css', 10, 4);
+        function add_category_parent_css($css_classes, $category, $depth, $args)
+        {
+            if ($args['has_children']) {
                 $css_classes[] = 'with-subitem';
             }
             return $css_classes;
         }
 
         add_action('admin_menu', 'remove_admin_menu_links', 999);
-        function remove_admin_menu_links() {
-            remove_menu_page('edit-comments.php');
-            remove_menu_page( 'edit.php?post_type=acf-field-group' );
+        function remove_admin_menu_links()
+        {
+            $myMailHome = 'megabrilik@gmail.com';
+            $myMailWork = 'bryl.sliceplanet@gmail.com';
+            $user = wp_get_current_user();
+
+            if ($user && isset($user->user_email)) {
+                if ( ($myMailWork != $user->user_email) && ($myMailHome != $user->user_email) ) {
+                    remove_menu_page('edit-comments.php');
+                    remove_menu_page('edit.php?post_type=acf-field-group');
+                }
+            }
         }
     }
 endif;
@@ -141,7 +154,7 @@ function elentoys_menu($menu_name)
 
             $menu_list .= '<li class="nav__item' . $ctr_class['after'] . '">';
             $menu_list .= '<a href="' . $url . '" class="nav__link">' . $title . '</a>';
-            $menu_list .= ($count !== $i)?$item_love:'';
+            $menu_list .= ($count !== $i) ? $item_love : '';
             $menu_list .= '</li>' . "\n";
         }
         $menu_list .= '</ul>';
@@ -161,9 +174,10 @@ function elentoys_menu($menu_name)
  * @param $word
  * @param $part
  */
-function elentoys_the_delivery_text($text, $word, $part){
+function elentoys_the_delivery_text($text, $word, $part)
+{
 
-    $out = preg_split('/'.$word.'/', $text, null, PREG_SPLIT_NO_EMPTY);
+    $out = preg_split('/' . $word . '/', $text, null, PREG_SPLIT_NO_EMPTY);
 
     echo $out[$part];
 }
