@@ -36,13 +36,13 @@ $query = new WP_Query($args);
         <div class="wrapper">
             <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-list__item">
-                    <a href="#" class="breadcrumbs-list__link">
+                    <a href="<?php echo get_term_link ( $cur_terms[0]->term_id,'toys_category' ) ?>" class="breadcrumbs-list__link">
                         <?php echo $cur_terms[0]->name; ?>
                     </a>
                 </li>
                 <?php if ($cur_terms[1]->name && $cur_terms[1]->parent != 0): ?>
                     <li class="breadcrumbs-list__item">
-                        <a href="#" class="breadcrumbs-list__link">
+                        <a href="<?php echo get_term_link ( $cur_terms[1]->term_id,'toys_category' ) ?>" class="breadcrumbs-list__link">
                             <?php echo $cur_terms[1]->name; ?>
                         </a>
                     </li>
@@ -155,7 +155,6 @@ $query = new WP_Query($args);
                                 <?php echo $query->post->post_title; ?>
                                 /
                                 <?php
-                                $cur_terms = get_the_terms($query->post->ID, $related_tax);
                                 if (is_array($cur_terms)) {
                                     echo $cur_terms[0]->name;
 //                                            foreach( $cur_terms as $cur_term ){
