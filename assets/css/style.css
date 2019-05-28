@@ -2419,6 +2419,19 @@ input:focus + .input-icon i {
     margin-left: -20px;
     margin-left: -20px;
     display: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 
 .icon-load-box{
@@ -2441,12 +2454,40 @@ input:focus + .input-icon i {
     height: 50px;
 }
 
+.icon-load-img-1{
+    animation: 3s button-anim forwards; 
+}
+.icon-load-img-2{
+    
+}
+.icon-load-img-3{
+    
+}
+
 .icon-load-img:not(:last-child){
     margin-right: 30px;
 }
 
 .loaded .icon-load {
     display: block;
+}
+
+@keyframes button-anim{
+    form{
+        transform: translateX(0);
+    }
+    
+    50%{
+        transform: translateX(-20px)
+    }
+    
+    80%{
+        transform: translateX(20px)
+    }
+    
+    to{
+        transform: translateX(0)
+    }
 }
 
 .novetly-slider__item.slick-slide .btn {
