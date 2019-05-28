@@ -2487,11 +2487,11 @@ input:focus + .input-icon i {
         transform: translateY(0);
     }
     
-    40%{
+    10%{
         transform: translateY(-20px)
     }
     
-    50%{
+    40%{
         transform: translateY(20px)
     }
     
@@ -2504,11 +2504,11 @@ input:focus + .input-icon i {
         transform: translateY(0);
     }
     
-    50%{
+    40%{
         transform: translateY(-20px)
     }
     
-    60%{
+    70%{
         transform: translateY(20px)
     }
     
@@ -2521,17 +2521,14 @@ input:focus + .input-icon i {
         transform: translateY(0);
     }
     
-    60%{
+    70%{
         transform: translateY(-20px)
     }
     
-    70%{
+    100%{
         transform: translateY(20px)
     }
     
-    to{
-        transform: translateY(0)
-    }
 }
 
 .novetly-slider__item.slick-slide .btn {
