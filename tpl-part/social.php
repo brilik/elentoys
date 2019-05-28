@@ -67,7 +67,7 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
                 while (has_sub_field('vertical', 'options')) {
 
                     $out .= '<li class="social__item">
-                    <a href="' . get_sub_field('link') . '" class="social__link">
+                    <a href="' . get_sub_field('link') . '" class="social__link" target="_blank">
                     <i class="icon-' . get_sub_field('icon') . '"></i></a></li>';
 
                 }
