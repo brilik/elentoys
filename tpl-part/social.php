@@ -26,7 +26,7 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
                 if ($fileName == 'twitter' || $fileName == 'skype' || $fileName == '' || $fileName == 'wp' || $fileName == 'viber') continue;
 
                 $out .= '<li class="new-soc__item item' . ++$count . '">
-                                <a href="' . get_sub_field('link') . '" class="new-soc__link">
+                                <a href="' . get_sub_field('link') . '" class="new-soc__link" target="_blank"git >
                                     <img src="' . get_template_directory_uri() . '/assets/img/social/' . $fileName . '2.svg"
                                          alt="">
                                 </a>
@@ -40,7 +40,7 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 
                 $fileName = (get_sub_field('icon') === 'whatsapp') ? 'wp' : get_sub_field('icon');
                 $out .= '<li class="backcall-list__item">
-                    <a href="' . get_sub_field('link') . '" class="backcall-list__link ' . $fileName . '">
+                    <a href="' . get_sub_field('link') . '" class="backcall-list__link ' . $fileName . '" target="_blank">
                     <img src="' . get_template_directory_uri() . '/assets/img/social/' . $fileName . '.svg" alt=""></a></li>';
             }
 
@@ -56,7 +56,7 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 
                     if (false !== $key) {
                         $out .= '<li class="social__item">
-                        <a href="' . get_sub_field('link') . '" class="social__link">
+                        <a href="' . get_sub_field('link') . '" class="social__link" target="_blank">
                         <i class="icon-' . $arrShow[$key] . '"></i></a></li>';
                     }
 
