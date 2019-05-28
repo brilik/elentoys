@@ -29,7 +29,13 @@
 
 </div>
 
-<div class="icon-load"></div>
+<div class="icon-load">
+    <div class="icon-load-box">
+        <div class="icon-load-img icon-load-img-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img1.svg" alt=""></div>
+        <div class="icon-load-img icon-load-img-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img2.svg" alt=""></div>
+        <div class="icon-load-img icon-load-img-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img3.svg" alt=""></div>
+    </div>
+</div>
 
 <!-- BODY EOF   -->
 
