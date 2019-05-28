@@ -2462,13 +2462,13 @@ input:focus + .input-icon i {
 }
 
 .loaded .icon-load-img-1{
-    animation: button-anim-1 5s forwards; 
+    animation: button-anim-1 5s forwards infinite; 
 }
 .loaded .icon-load-img-2{
-    animation: button-anim-2 5s forwards; 
+    animation: button-anim-2 5s forwards infinite; 
 }
 .loaded .icon-load-img-3{
-    animation: button-anim-3 5s forwards; 
+    animation: button-anim-3 5s forwards infinite; 
 }
 
 .loaded .icon-load-img:not(:last-child){
