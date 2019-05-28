@@ -2468,7 +2468,7 @@ input:focus + .input-icon i {
     animation: button-anim .8s .4s infinite linear; 
 }
 .loaded .icon-load-img-3{
-    animation: button-anim .8s infinite linear; 
+    animation: button-anim .8s .8s infinite linear; 
 }
 
 .loaded .icon-load-img:not(:last-child){
