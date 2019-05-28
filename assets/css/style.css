@@ -2484,53 +2484,53 @@ input:focus + .input-icon i {
 
 @keyframes button-anim-1{
     from{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     
     40%{
-        transform: translateX(-20px)
+        transform: translateY(-20px)
     }
     
     50%{
-        transform: translateX(20px)
+        transform: translateY(20px)
     }
     
     to{
-        transform: translateX(0)
+        transform: translateY(0)
     }
 }
 @keyframes button-anim-2{
     from{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     
     50%{
-        transform: translateX(-20px)
+        transform: translateY(-20px)
     }
     
     60%{
-        transform: translateX(20px)
+        transform: translateY(20px)
     }
     
     to{
-        transform: translateX(0)
+        transform: translateY(0)
     }
 }
 @keyframes button-anim-3{
     from{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     
     60%{
-        transform: translateX(-20px)
+        transform: translateY(-20px)
     }
     
     70%{
-        transform: translateX(20px)
+        transform: translateY(20px)
     }
     
     to{
-        transform: translateX(0)
+        transform: translateY(0)
     }
 }
 
