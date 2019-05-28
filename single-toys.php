@@ -123,7 +123,7 @@ $query = new WP_Query($args);
                                 <?php echo number_format(get_field('price'), 0, ' ', ' '); ?>
                                 <span><?php the_field('val') ?></span>
                             </div>
-                            <a href="#" class="btn btn_pink"><span class="btn__icon">.</span>Заказать<span
+                            <a href="#popup-backcall" class="btn btn_pink js-fancybox"><span class="btn__icon">.</span>Заказать<span
                                         class="btn__icon btn__icon_reverse">.</span></a>
                         </div>
                         <?php elentoys_the_social('social social_product', 0, array('telegram', 'inst', 'vk', 'viber')); ?>
