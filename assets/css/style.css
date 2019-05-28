@@ -2462,13 +2462,13 @@ input:focus + .input-icon i {
 }
 
 .loaded .icon-load-img-1{
-    animation: button-anim-1 4s forwards infinite; 
+    animation: button-anim 2s .1s infinite linear; 
 }
 .loaded .icon-load-img-2{
-    animation: button-anim-2 4s forwards infinite; 
+    animation: button-anim-2 2s .2s infinite linear; 
 }
 .loaded .icon-load-img-3{
-    animation: button-anim-3 4s forwards infinite; 
+    animation: button-anim-3 2s .3s infinite linear; 
 }
 
 .loaded .icon-load-img:not(:last-child){
@@ -2482,53 +2482,21 @@ input:focus + .input-icon i {
     display: flex;
 }
 
-@keyframes button-anim-1{
+@keyframes button-anim{
     from{
         transform: translateY(0);
     }
     
-    10%{
-        transform: translateY(-20px)
-    }
-    
-    35%{
+    25%{
         transform: translateY(20px)
     }
     
+    50%{
+        transform: translateY(-20px)
+    }
     to{
         transform: translateY(0)
     }
-}
-@keyframes button-anim-2{
-    from{
-        transform: translateY(0);
-    }
-    
-    35%{
-        transform: translateY(-20px)
-    }
-    
-    60%{
-        transform: translateY(20px)
-    }
-    
-    to{
-        transform: translateY(0)
-    }
-}
-@keyframes button-anim-3{
-    from{
-        transform: translateY(0);
-    }
-    
-    60%{
-        transform: translateY(-20px)
-    }
-    
-    85%{
-        transform: translateY(20px)
-    }
-    
 }
 
 .novetly-slider__item.slick-slide .btn {
