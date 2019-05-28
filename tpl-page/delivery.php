@@ -14,7 +14,9 @@ get_template_part('tpl-part/head');
 		<main class="content">
 
 			<section class="blog-section blog-section_feedback">
-				<div class="blog-section__top" style="background-image:url('<?php echo get_field('banner_img')['url']; ?>')">
+				<div class="blog-section__top" style="background-image:url('<?php echo get_field('banner_img')['url']; ?>')"
+                     data-mob-href="<?php echo get_field('banner_img_mob')['url']; ?>"
+                     data-tab-href="<?php echo get_field('banner_img_tab')['url']; ?>">
 					<div class="feedback-bg">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery-main-1.png" alt="">
 					</div>
