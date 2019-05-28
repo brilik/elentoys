@@ -30,11 +30,28 @@ $query = new WP_Query($args);
 
 <main class="content">
 
-<?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); $cur_terms = get_the_terms($query->post->ID, $related_tax); ?>
 
     <section class="product-section">
         <div class="wrapper">
-            <?php my_breadcrumbs(); ?>
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-list__item">
+                    <a href="#" class="breadcrumbs-list__link">
+                        <?php echo $cur_terms[0]->name; ?>
+                    </a>
+                </li>
+                <?php if ($cur_terms[1]->parent !== 0): ?>
+                    <li class="breadcrumbs-list__item">
+                        <a href="#" class="breadcrumbs-list__link">
+                            <?php echo $cur_terms[1]->name; ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <li class="breadcrumbs-list__item">
+                    <?php the_title(); ?>
+                </li>
+            </ul>
+            <?php // my_breadcrumbs(); ?>
             <div class="product-section__wrapper">
                 <div class="product-section__box">
                     <div class="product-section__slider">
