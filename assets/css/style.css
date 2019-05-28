@@ -2462,13 +2462,13 @@ input:focus + .input-icon i {
 }
 
 .loaded .icon-load-img-1{
-    animation: button-anim-1 5s forwards infinite; 
+    animation: button-anim-1 4s forwards infinite; 
 }
 .loaded .icon-load-img-2{
-    animation: button-anim-2 5s forwards infinite; 
+    animation: button-anim-2 4s forwards infinite; 
 }
 .loaded .icon-load-img-3{
-    animation: button-anim-3 5s forwards infinite; 
+    animation: button-anim-3 4s forwards infinite; 
 }
 
 .loaded .icon-load-img:not(:last-child){
@@ -2491,7 +2491,7 @@ input:focus + .input-icon i {
         transform: translateY(-20px)
     }
     
-    40%{
+    35%{
         transform: translateY(20px)
     }
     
@@ -2504,11 +2504,11 @@ input:focus + .input-icon i {
         transform: translateY(0);
     }
     
-    40%{
+    35%{
         transform: translateY(-20px)
     }
     
-    70%{
+    60%{
         transform: translateY(20px)
     }
     
@@ -2521,11 +2521,11 @@ input:focus + .input-icon i {
         transform: translateY(0);
     }
     
-    70%{
+    60%{
         transform: translateY(-20px)
     }
     
-    100%{
+    85%{
         transform: translateY(20px)
     }
     
