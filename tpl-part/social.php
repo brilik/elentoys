@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Генерация вёрстки социальных значков.
+ *
+ * @param $ulClass
+ * @param int $isPopup приминмает только 1, 2 или 0 (по умолчанию). 1 - в попапе, 2 - в секции
+ * @param int $arrShow принимает массив социалок, которые нужно вывести
+ */
 function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 {
 
@@ -39,9 +46,9 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 
         } elseif ($isPopup === 0) {
 
-            if( $arrShow !== 0 ) {
+            $key = 0;
 
-                $key = 0;
+            if( $arrShow !== 0 ) {
 
                 while (has_sub_field('vertical', 'options')) {
 
@@ -54,6 +61,17 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
                     }
 
                 }
+
+            } else {
+
+                while (has_sub_field('vertical', 'options')) {
+
+                    $out .= '<li class="social__item">
+                    <a href="' . get_sub_field('link') . '" class="social__link">
+                    <i class="icon-' . get_sub_field('icon') . '"></i></a></li>';
+
+                }
+
             }
         }
 
