@@ -40,7 +40,7 @@ $query = new WP_Query($args);
                         <?php echo $cur_terms[0]->name; ?>
                     </a>
                 </li>
-                <?php if ($cur_terms[1]->parent !== 0): ?>
+                <?php if ($cur_terms[1]->name && $cur_terms[1]->parent != 0): ?>
                     <li class="breadcrumbs-list__item">
                         <a href="#" class="breadcrumbs-list__link">
                             <?php echo $cur_terms[1]->name; ?>
