@@ -9,7 +9,7 @@
                 <span></span>
             </a>
 
-            <?php elentoys_the_social('social-header'); ?>
+            <?php elentoys_the_social('social-header', 0, array('vk', 'fb', 'inst', 'twitter')); ?>
 
             <a href="<?php echo home_url(); ?>" class="logo logo_header">
 						<span class="animal-imgs">
