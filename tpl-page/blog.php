@@ -68,7 +68,7 @@ global $post;
                                             <?php the_date('d. m. Y'); ?>
                                         </div>
                                         <div class="blog-description__text">
-                                            <?php the_content(); ?>
+                                            <?php the_excerpt(); ?>
                                         </div>
                                         <a href="<?php the_permalink(); ?>" class="btn btn_pink">
                                             <span class="btn__icon">.</span>Читать<span class="btn__icon btn__icon_reverse">.</span>
