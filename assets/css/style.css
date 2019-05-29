@@ -2409,7 +2409,11 @@ input:focus + .input-icon i {
     visibility: hidden;
 }
 
-.icon-load {
+.icon-load{
+    display: none;
+}
+
+.loaded .icon-load {
 /*    background: url(../img/loader.gif) no-repeat left top;*/
     width: 100%;
     height: 100%;
@@ -2434,7 +2438,8 @@ input:focus + .input-icon i {
             align-items: center;
 }
 
-.icon-load-box{
+
+.loaded .icon-load-box{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2449,47 +2454,80 @@ input:focus + .input-icon i {
     -ms-flex-align: center;
             align-items: center;
 }
-.icon-load-img{
+
+
+.loaded .icon-load-img{
     width: 50px;
     height: 50px;
 }
 
-.icon-load-img-1{
-    animation: 3s button-anim forwards; 
+.loaded .icon-load-img-1{
+    -webkit-animation: button-anim .8s infinite linear;
+            animation: button-anim .8s infinite linear; 
 }
-.icon-load-img-2{
-    
+.loaded .icon-load-img-2{
+    -webkit-animation: button-anim .8s .2s infinite linear;
+            animation: button-anim .8s .2s infinite linear; 
 }
-.icon-load-img-3{
-    
+.loaded .icon-load-img-3{
+    -webkit-animation: button-anim .8s .4s infinite linear;
+            animation: button-anim .8s .4s infinite linear; 
 }
 
-.icon-load-img:not(:last-child){
+.loaded .icon-load-img:not(:last-child){
     margin-right: 30px;
 }
 
 .loaded .icon-load {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@-webkit-keyframes button-anim{
+    from{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    
+    30%{
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px)
+    }
+    
+    90{
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px)
+    }
+    
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
 }
 
 @keyframes button-anim{
-    form{
-        transform: translateX(0);
+    from{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     
-    50%{
-        transform: translateX(-20px)
+    30%{
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px)
     }
     
-    80%{
-        transform: translateX(20px)
+    90{
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px)
     }
     
-    to{
-        transform: translateX(0)
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
 }
-
 .novetly-slider__item.slick-slide .btn {
     visibility: hidden;
     margin-top: 53px;
