@@ -126,7 +126,11 @@ $query = new WP_Query($args);
                             <a href="#popup-backcall" class="btn btn_pink js-fancybox"><span class="btn__icon">.</span>Заказать<span
                                         class="btn__icon btn__icon_reverse">.</span></a>
                         </div>
+<<<<<<< HEAD
                         <?php echo elentoys_the_social('social social_product', 3, array('telegram', 'inst', 'vk', 'viber', 'whatsapp'), get_the_title()); ?>
+=======
+                        <?php echo elentoys_chat_social( array('telegram', 'inst', 'vk', 'viber', 'whatsapp') ); ?>
+>>>>>>> 39250c57ea6110edd2ffcf4ab072fa16d2c0e0d1
                     </div>
                 </div>
             </div>
