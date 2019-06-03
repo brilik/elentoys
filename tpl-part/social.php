@@ -6,6 +6,7 @@
  * @param $ulClass
  * @param int $isPopup приминмает только 1, 2 или 0 (по умолчанию). 1 - в попапе, 2 - в секции
  * @param int $arrShow принимает массив социалок, которые нужно вывести
+ * @return string
  */
 function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 {
