@@ -184,6 +184,28 @@ function elentoys_the_delivery_text($text, $word, $part)
 
 
 /**
+ * Clear phone.
+ * Remove extra characters from phone number.
+ * Input: text phone with characters.
+ * Output: text phone number without characters, symbols.
+ *
+ * @param $textPhone
+ * @param int $isPlus Add plus phone number? Example: +380992673862
+ * @return string|string[]|null
+ */
+function elentoys_the_phone_clear($textPhone, $isPlus = 0)
+{
+    $pattern = '/[^0-9]/';
+
+    if ($isPlus === 1) {
+        $pattern = '![^0-9]+!';
+    }
+
+    return preg_replace($pattern, '', $textPhone);
+}
+
+
+/**
  * Add item menu - advanced.
  */
 require get_template_directory() . '/inc/item_menu.php';
