@@ -6087,7 +6087,9 @@ input:focus + .input-icon i {
 }
 
 .product-wrapper .novelty-slider__picture img {
-    min-height: 240px;
+    max-height: 240px;
+    height: auto;
+    width: auto; 
 }
 
 .product-wrapper .proudct-description__row {
