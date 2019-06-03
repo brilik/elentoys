@@ -128,9 +128,6 @@ $query = new WP_Query($args);
                         </div>
 
                         <?php echo elentoys_the_social('social social_product', 3, array('telegram', 'inst', 'vk', 'viber', 'whatsapp'), get_the_title()); ?>
-
-                        <?php echo elentoys_chat_social( array('telegram', 'inst', 'vk', 'viber', 'whatsapp') ); ?>
-
                     </div>
                 </div>
             </div>
