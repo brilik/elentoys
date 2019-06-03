@@ -9,7 +9,7 @@
                 <span></span>
             </a>
 
-            <?php elentoys_the_social('social-header', 0, array('vk', 'fb', 'inst', 'twitter')); ?>
+            <?php echo elentoys_the_social('social-header', 0, array('vk', 'fb', 'inst', 'twitter')); ?>
 
             <a href="<?php echo home_url(); ?>" class="logo logo_header">
 						<span class="animal-imgs">
@@ -31,7 +31,7 @@
     </div>
 </header>
 
-<?php elentoys_the_social('social js-social'); ?>
+<?php echo elentoys_the_social('social js-social'); ?>
 
 <a href="#popup-backcall" class="back-call js-fancybox"><i class="zmdi zmdi-phone"></i></a>
 

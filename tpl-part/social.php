@@ -79,6 +79,6 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 
     endif;
 
-    echo $out;
+    return $out;
 
 }

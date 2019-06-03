@@ -282,7 +282,7 @@ $tax_type = 'toys_category';
                     </div>
                     <div class="new-soc__box">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-order-img.png" alt="">
-                        <?php elentoys_the_social('new-soc__list', 2); ?>
+                        <?php echo elentoys_the_social('new-soc__list', 2); ?>
                     </div>
                 </div>
             </div>
