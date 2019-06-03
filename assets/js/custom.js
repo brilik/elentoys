@@ -37,6 +37,26 @@ function viewport() {
 
 $(document).ready(function () {
 
+    if ($('.new-section__chat .new-chat__item').length) {
+        function Anim() {
+            $delay = 0;
+
+            $('.new-section__chat .new-chat__item').each(function (index, item) {
+                var that = $(this);
+                setTimeout(function () {                    
+                    that.addClass('show');
+                }, $delay += 1500);
+            });
+        };    
+        Anim();
+        
+        setInterval(function () {
+            $('.new-chat__item').removeClass('show');
+            Anim();
+        }, 7000);
+
+    };
+    
     if ($('.header').length) {
         $(window).scroll(function () {
             var scr_top = $(window).scrollTop();
