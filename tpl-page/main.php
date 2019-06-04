@@ -23,7 +23,6 @@ $tax_type = 'toys_category';
                 <?php
                 $section = get_field('slider_add');
 
-//                echo '<pre>'; print_r($section); echo '</pre>';
                 if ($section): $count = 0;
 
                     foreach ($section as $item): $count++;
@@ -34,7 +33,8 @@ $tax_type = 'toys_category';
                         $subtitle = $item['subtitle'];
                         $link = array();
                         $desc = $item['desc'];
-                        $positionImg = $item['positionImg'];
+                        $positionImg = $item['transform']['positionImg'];
+                        $positionImgY = $item['transform']['positionImgY'];
                         $imgLeft = $item['imgLeft'];
                         $imgRight = $item['imgRight'];
 
@@ -56,7 +56,8 @@ $tax_type = 'toys_category';
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
                                         <img src="<?php echo $imgLeft['url'] ?>"
-                                             style="transform: translateX(<?php echo $positionImg; ?>px)" alt="">
+                                             style="transform: translate(<?php echo $positionImg; ?>px,
+                                             <?php echo $positionImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>" alt="">
