@@ -51,18 +51,20 @@ get_template_part('tpl-part/head');
 										<div class="delivery-town-wrap">
 											<h2 class="h2 h2_pink"><span class="h2__icon">ч</span>Примерные сроки доставки<span class="h2__icon h2__icon_reverse">ч</span></h2>
 											<?php if( get_field('table_add') ): ?>
-                                            <div class="delivery-town">
-                                                <div class="delivery-town__header">
-                                                    <div class="col col_1">Город</div>
-                                                    <div class="col col_2">Срок</div>
+                                                <div class="delivery-town-wrap">
+                                                    <div class="delivery-town">
+                                                        <div class="delivery-town__header">
+                                                            <div class="col col_1">Город</div>
+                                                            <div class="col col_2">Срок</div>
+                                                        </div>
+                                                        <?php while( has_sub_field('table_add') ): ?>
+                                                            <div class="delivery-town__row">
+                                                                <div class="col col_1"><?php the_sub_field('city'); ?></div>
+                                                                <div class="col col_2"><?php the_sub_field('line'); ?></div>
+                                                            </div>
+                                                        <?php endwhile; ?>
+                                                    </div>
                                                 </div>
-                                                <?php while( has_sub_field('table_add') ): ?>
-												<div class="delivery-town__row">
-													<div class="col col_1"><?php the_sub_field('city'); ?></div>
-													<div class="col col_2"><?php the_sub_field('line'); ?></div>
-												</div>
-												<?php endwhile; ?>
-											</div>
 											<?php endif; ?>
 										</div>
 									</li>

@@ -3938,10 +3938,15 @@ input:focus + .input-icon i {
     margin-top: 20px;
 }
 
+.delivery-town-wrap {
+    overflow-y: auto;
+}
+
 .delivery-town {
     margin-top: 50px;
     width: 100%;
     max-width: 920px;
+    max-height: 440px;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -4689,7 +4694,8 @@ input:focus + .input-icon i {
 }
 
 .blog-section_feedback .blog-section__top {
-    background: #ade1fb;
+    background-color: #ade1fb;
+    background-repeat: none;
 }
 
 .blog-section_feedback .blog-section__top:before {
@@ -4854,9 +4860,8 @@ input:focus + .input-icon i {
     }
 
     .blog-section_feedback .blog-section__top {
-        background-size: 159%;
-        background-position-x: 52%;
-        background-position-y: 103%;
+        background-size: 100%;
+        background-position: center center;
     }
 
     .feedback-list__img {
