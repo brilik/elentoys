@@ -3947,8 +3947,6 @@ input:focus + .input-icon i {
     width: 100%;
     max-width: 920px;
     max-height: 440px;
-    border-radius: 50px;
-    overflow: hidden;
 }
 
 .delivery-town::before {
@@ -3986,6 +3984,8 @@ input:focus + .input-icon i {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
 }
 
 .delivery-town__header:after {
@@ -4036,6 +4036,8 @@ input:focus + .input-icon i {
 
 .delivery-town__row:last-child {
     border-bottom: none;
+    border-radius:  0 0 50px 50px;
+    overflow: hidden;
 }
 
 .box-feedback-toy {
