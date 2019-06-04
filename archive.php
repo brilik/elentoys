@@ -91,7 +91,7 @@ $query = new WP_Query($args); ?>
                                                        class="name"><?php echo $post->post_title; ?></a>
                                                 </div>
                                                 <div class="toys-list__desc-price">
-                                                    <?php the_field('price', get_the_ID()); ?>
+                                                    <?php echo number_format(get_field('price', get_the_ID()), 0, ' ', ' '); ?>
                                                     <span><?php the_field('val', get_the_ID()); ?></span>
                                                 </div>
                                                 <div class="toys-list__desc-more">
