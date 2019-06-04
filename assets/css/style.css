@@ -11205,12 +11205,11 @@ input:focus + .input-icon i {
     .about-eye__img {
         position: absolute;
         width: 160px;
-        right: 0px;
+        right: -34px;
         top: 66px;
     }
 
     .about-eye__list {
-        padding-top: 150px;
         max-width: 300px;
         margin: 0;
     }
