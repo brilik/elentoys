@@ -51,7 +51,7 @@ get_template_part('tpl-part/head');
 										<div class="delivery-town-wrap">
 											<h2 class="h2 h2_pink"><span class="h2__icon">ч</span>Примерные сроки доставки<span class="h2__icon h2__icon_reverse">ч</span></h2>
 											<?php if( get_field('table_add') ): ?>
-                                                <div class="delivery-town-wrap">
+                                                <div class="delivery-town-box">
                                                     <div class="delivery-town">
                                                         <div class="delivery-town__header">
                                                             <div class="col col_1">Город</div>

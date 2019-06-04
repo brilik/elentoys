@@ -3938,7 +3938,7 @@ input:focus + .input-icon i {
     margin-top: 20px;
 }
 
-.delivery-town-wrap {
+.delivery-town-box {
     overflow-y: auto;
 }
 
