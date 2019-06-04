@@ -6221,10 +6221,6 @@ input:focus + .input-icon i {
     .product-wrapper .novetly-slider {
         margin-top: 35px;
     }
-    .main-wrapper.product-wrapper {
-        padding-top: 175px;
-    }
-
     .breadcrumbs-list {
         text-align: center;
     }
@@ -6421,7 +6417,9 @@ input:focus + .input-icon i {
         max-width: 100%;
         height: auto;
     }
-
+    .main-wrapper.product-wrapper {
+        padding-top: 10px;
+    }
     .product-section__slider {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;

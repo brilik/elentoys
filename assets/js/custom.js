@@ -426,17 +426,17 @@ var handler = function () {
     }
     if (viewport_wid <= 767) {
         $('.main-slider__item_with-bg').each(function () {
-            var src = $(this).data('tab-href');
+            var src = $(this).data('mob-href');
             $(this).css("background-image", "url('" + src + "')");
         });
 
-        var src2 = $('.blog-section .blog-section__top').data('tab-href');
+        var src2 = $('.blog-section .blog-section__top').data('mob-href');
         $('.blog-section .blog-section__top').css("background-image", "url('" + src2 + "')");
 
-        var src3 = $('.about-section__seven').data('tab-href');
+        var src3 = $('.about-section__seven').data('mob-href');
         $('.about-section__seven').css("background-image", "url('" + src3 + "')");
 
-        var src4 = $('.section_about-me').data('tab-href');
+        var src4 = $('.section_about-me').data('mob-href');
         $('.section_about-me').css("background-image", "url('" + src4 + "')");
     }
 
