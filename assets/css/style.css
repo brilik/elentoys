@@ -4457,6 +4457,13 @@ input:focus + .input-icon i {
 }
 
 @media (max-width: 767px) {
+    .delivery-town__header,
+    .delivery-town__row:last-child {
+        border-radius: none;
+    }
+    .delivery-town {
+        max-height: 250px;
+    }
     .box-feedback-toy__info span {
         display: none;
     }
