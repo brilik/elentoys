@@ -5664,7 +5664,7 @@ input:focus + .input-icon i {
 }
 
 .product-section {
-    padding-top: 112px;
+    padding-top: 160px;
     padding-bottom: 100px;
     background: #f9f9f9;
     position: relative;
@@ -11888,7 +11888,7 @@ input:focus + .input-icon i {
     }
 
     .section_main::before {
-        bottom: -11px;
+        bottom: -15px;
     }
 
     .main-slider__item_with-bg .main-slider__right.center-mobile {
