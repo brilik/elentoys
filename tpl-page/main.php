@@ -35,6 +35,8 @@ $tax_type = 'toys_category';
                         $desc = $item['desc'];
                         $positionImg = $item['transform']['positionImg'];
                         $positionImgY = $item['transform']['positionImgY'];
+                        $positionRightImg = $item['transform_right']['positionImg'];
+                        $positionRightImgY = $item['transform_right']['positionImgY'];
                         $imgLeft = $item['imgLeft'];
                         $imgRight = $item['imgRight'];
 
@@ -60,7 +62,9 @@ $tax_type = 'toys_category';
                                              <?php echo $positionImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__img-bottom">
-                                        <img src="<?php echo $imgRight['url'] ?>" alt="">
+                                        <img src="<?php echo $imgRight['url'] ?>"
+                                             style="transform: translate(<?php echo $positionRightImg; ?>px,
+                                             <?php echo $positionRightImgY;?>px)!important; alt="">
                                     </div>
                                     <div class="main-slider__right">
                                         <h1 class="h1"><?php echo $title; ?></h1>
