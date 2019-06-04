@@ -123,24 +123,3 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0, $productName 
     return $out;
 
 }
-
-function elentoys_chat_social($arrSocials = '')
-{
-    $result = $resSocial = '';
-
-    if (in_array("whatsapp", $arrSocials)) {
-
-        $str = elentoys_the_social('social social_product', 0, ['whatsapp']);
-        $ptrn = '<a href="89853166801" class="social__link" target="_blank"><i class="icon-whatsapp"></i></a>';
-        $rplc = '<a href="https://wa.me/79101510855?text=го%20на%20карты" class="social__link" target="_blank"><i class="icon-whatsapp"></i></a>';
-
-        $result = $str;
-//        $result = preg_replace($ptrn, $rplc, $str);
-
-//        $resSocial = $str;
-
-//        $result .= $resSocial;
-    }
-
-    return $result;
-}
