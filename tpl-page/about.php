@@ -169,6 +169,9 @@ get_template_part('tpl-part/head');
                      data-tab-href="<?php echo $left['img_tab']; ?>">
                 <div class="wrapper">
                     <div class="about-eye__box">
+                        <div class="about-eye__img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img12.png" alt="">
+                        </div> 
                         <div class="about-eye__description">
                             <h2 class="h2 h2_pink">
                                 <span class="h2__icon">ч</span>
@@ -187,10 +190,7 @@ get_template_part('tpl-part/head');
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img11.png" alt="">
                                 </li>
                             </ul>
-                        </div>
-                        <div class="about-detail__img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img12.png" alt="">
-                        </div>                        
+                        </div>                                               
                     </div>
                 </div>
             </section>
