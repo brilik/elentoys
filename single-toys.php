@@ -126,7 +126,8 @@ $query = new WP_Query($args);
                             <a href="#popup-backcall" class="btn btn_pink js-fancybox"><span class="btn__icon">.</span>Заказать<span
                                         class="btn__icon btn__icon_reverse">.</span></a>
                         </div>
-                        <?php echo elentoys_chat_social( array('telegram', 'inst', 'vk', 'viber', 'whatsapp') ); ?>
+
+                        <?php echo elentoys_the_social('social social_product', 3, array('telegram', 'inst', 'vk', 'viber', 'whatsapp'), get_the_title()); ?>
                     </div>
                 </div>
             </div>
@@ -153,14 +154,14 @@ $query = new WP_Query($args);
                             </div>
                             <div class="novetly-slider__text">
                                 <?php echo $query->post->post_title; ?>
-                                /
                                 <?php
-                                if (is_array($cur_terms)) {
-                                    echo $cur_terms[0]->name;
+//                                echo '/';
+//                                if (is_array($cur_terms)) {
+//                                    echo $cur_terms[0]->name;
 //                                            foreach( $cur_terms as $cur_term ){
 //                                                echo $cur_term->name . ' и ';
 //                                            }
-                                }
+//                                }
                                 ?>
                             </div>
                         </div>

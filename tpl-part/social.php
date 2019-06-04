@@ -6,13 +6,18 @@
  * @param $ulClass
  * @param int $isPopup приминмает только 1, 2 или 0 (по умолчанию). 1 - в попапе, 2 - в секции
  * @param int $arrShow принимает массив социалок, которые нужно вывести. Example: telegram, inst, vk, viber
+<<<<<<< HEAD
+ * @param string $productName нужно использовать функцию get_the_title().
+=======
+>>>>>>> 39250c57ea6110edd2ffcf4ab072fa16d2c0e0d1
  * @return string
  */
-function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
+function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0, $productName = '')
 {
 
     $out = (string)'';
-    $count = 0;
+    $count = $key = 0;
+    $textOrder = (string)"Добрый день! \n Я хочу заказать \"$productName\"";
 
     if (get_field('vertical', 'options')):
 
@@ -27,7 +32,7 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
                 if ($fileName == 'twitter' || $fileName == 'skype' || $fileName == '' || $fileName == 'wp' || $fileName == 'viber') continue;
 
                 $out .= '<li class="new-soc__item item' . ++$count . '">
-                                <a href="' . get_sub_field('link') . '" class="new-soc__link" target="_blank"git >
+                                <a href="' . get_sub_field('link') . '" class="new-soc__link" target="_blank">
                                     <img src="' . get_template_directory_uri() . '/assets/img/social/' . $fileName . '2.svg"
                                          alt="">
                                 </a>
@@ -46,8 +51,6 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
             }
 
         } elseif ($isPopup === 0) {
-
-            $key = 0;
 
             if( $arrShow !== 0 ) {
 
@@ -74,6 +77,43 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
                 }
 
             }
+
+        } elseif ($isPopup === 3) {
+
+            if( $arrShow !== 0 ) {
+
+                while (has_sub_field('vertical', 'options')) {
+
+                    $key = array_search(get_sub_field('icon'), $arrShow);
+
+                    $link = $phone = get_sub_field('link');
+
+                    if ('whatsapp' === $arrShow[$key]) {
+
+                        $phone = elentoys_the_phone_clear($phone);
+                        $link = "https://wa.me/$phone?text=".urlencode($textOrder);
+                    }
+
+                    if (false !== $key) {
+                        $out .= '<li class="social__item">
+                        <a href="'. $link .'" class="social__link" target="_blank">
+                        <i class="icon-' . $arrShow[$key] . '"></i></a></li>';
+                    }
+
+                }
+
+            } else {
+
+                while (has_sub_field('vertical', 'options')) {
+
+                    $out .= '<li class="social__item">
+                    <a href="' . get_sub_field('link') . '" class="social__link" target="_blank">
+                    <i class="icon-' . get_sub_field('icon') . '"></i></a></li>';
+
+                }
+
+            }
+
         }
 
         $out .= '</ul>';
@@ -82,25 +122,4 @@ function elentoys_the_social($ulClass, $isPopup = 0, $arrShow = 0)
 
     return $out;
 
-}
-
-function elentoys_chat_social($arrSocials = '')
-{
-    $result = $resSocial = '';
-
-    if (in_array("whatsapp", $arrSocials)) {
-
-        $str = elentoys_the_social('social social_product', 0, ['whatsapp']);
-        $ptrn = '<a href="89853166801" class="social__link" target="_blank"><i class="icon-whatsapp"></i></a>';
-        $rplc = '<a href="https://wa.me/79101510855?text=го%20на%20карты" class="social__link" target="_blank"><i class="icon-whatsapp"></i></a>';
-
-        $result = $str;
-//        $result = preg_replace($ptrn, $rplc, $str);
-
-//        $resSocial = $str;
-
-//        $result .= $resSocial;
-    }
-
-    return $result;
 }

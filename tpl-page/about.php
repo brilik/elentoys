@@ -178,7 +178,7 @@ get_template_part('tpl-part/head');
                                 <span class="about-name"><?php echo $right['title']; ?></span>
                                 <span class="h2__icon h2__icon_reverse">ч</span>
                             </h2>
-                            <?php $right['desc']; ?>
+                            <?php echo $right['desc']; ?>
                             <ul class="about-eye__list">
                                 <li class="about-eye__item">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img9.png" alt="">
