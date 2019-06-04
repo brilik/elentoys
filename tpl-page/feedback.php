@@ -35,15 +35,14 @@ get_template_part('tpl-part/head');
                                     <?php $block = get_sub_field('right'); ?>
                                     <li class="feedback-list__item">
                                         <div class="feedback-list__img">
-                                            <a href="#" class="feedback-list__img-link"></a>
+                                            <div class="feedback-list__img-link"></div>
                                             <img src="<?php echo get_sub_field('ava'); ?>"
                                                  alt="feedback-image">
                                         </div>
                                         <div class="feedback-list__desc">
                                             <h4 class="feedback-list__desc-title">
                                                 <span class="nav__icon">У</span>
-                                                <a href="#"
-                                                   class="feedback-list__desc-name"><?php echo $block['name']; ?></a>
+                                                <div class="feedback-list__desc-name"><?php echo $block['name']; ?></div>
                                                 <span class="nav__icon">У</span>
                                             </h4>
                                             <div class="blog-description__date">
