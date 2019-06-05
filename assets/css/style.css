@@ -5878,6 +5878,8 @@ input:focus + .input-icon i {
 .product-slider__for img {
     width: 100%;
     max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .product-slider__for .slick-list {
@@ -5908,6 +5910,7 @@ input:focus + .input-icon i {
 .product-for__link {
     display: block;
     max-height: inherit;
+    height: 100%;
 }
 
 .product-for__link::after {
@@ -5927,7 +5930,7 @@ input:focus + .input-icon i {
     max-height: inherit;
     overflow: hidden;
     position: relative;
-    max-height: 350px;
+    height: 350px;
 }
 
 .product-section__box {
@@ -6492,7 +6495,7 @@ input:focus + .input-icon i {
     .product-for__pict {
         margin-left: auto;
         margin-right: auto;
-        max-height: 280px;
+        height: 280px;
     }
 
     .product-section__description {
