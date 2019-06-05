@@ -23,7 +23,6 @@ $tax_type = 'toys_category';
                 <?php
                 $section = get_field('slider_add');
 
-//                echo '<pre>'; print_r($section); echo '</pre>';
                 if ($section): $count = 0;
 
                     foreach ($section as $item): $count++;
@@ -34,7 +33,10 @@ $tax_type = 'toys_category';
                         $subtitle = $item['subtitle'];
                         $link = array();
                         $desc = $item['desc'];
-                        $positionImg = $item['positionImg'];
+                        $positionImg = $item['transform']['positionImg'];
+                        $positionImgY = $item['transform']['positionImgY'];
+                        $positionRightImg = $item['transform_right']['positionImg'];
+                        $positionRightImgY = $item['transform_right']['positionImgY'];
                         $imgLeft = $item['imgLeft'];
                         $imgRight = $item['imgRight'];
 
@@ -46,7 +48,6 @@ $tax_type = 'toys_category';
                         $link['url'] = (!empty($item['link']['url'])) ? $item['link']['url'] : '#';
                         $link['target'] = (!empty($item['link']['target'])) ? $item['link']['target'] : '';
 
-
                         if ($item['position'] == 2) { ?>
 
                             <div class="main-slider__item main-slider__item_with-bg"
@@ -56,16 +57,27 @@ $tax_type = 'toys_category';
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
                                         <img src="<?php echo $imgLeft['url'] ?>"
-                                             style="transform: translateX(<?php echo $positionImg; ?>px)" alt="">
+                                             style="transform: translate(<?php echo $positionImg; ?>px,
+                                             <?php echo $positionImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__img-bottom">
-                                        <img src="<?php echo $imgRight['url'] ?>" alt="">
+                                        <img src="<?php echo $imgRight['url'] ?>"
+                                             style="transform: translate(<?php echo $positionRightImg; ?>px,
+                                             <?php echo $positionRightImgY;?>px)!important; alt="">
                                     </div>
                                     <div class="main-slider__right">
-                                        <h1 class="h1"><?php echo $title; ?></h1>
-                                        <div class="h1-descr"><?php echo $subtitle; ?></div>
-                                        <div class="main-slider__text"><?php echo $desc; ?></div>
-                                        <a href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <h1 class="h1"
+                                            style="transform: translate(<?php echo $item['position_title']['x']; ?>px,
+                                            <?php echo $item['position_title']['y'];?>px)!important;"><?php echo $title; ?></h1>
+                                        <div class="h1-descr"
+                                             style="transform: translate(<?php echo $item['position_subtitle']['x']; ?>px,
+                                             <?php echo $item['position_subtitle']['y'];?>px)!important;"><?php echo $subtitle; ?></div>
+                                        <div class="main-slider__text"
+                                             style="transform: translate(<?php echo $item['position_desc']['x']; ?>px,
+                                             <?php echo $item['position_desc']['y'];?>px)!important;"><?php echo $desc; ?></div>
+                                        <a style="transform: translate(<?php echo $item['position_btn']['x']; ?>px,
+                                           <?php echo $item['position_btn']['y'];?>px)!important;"
+                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span>
                                             <?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span>
