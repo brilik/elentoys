@@ -34,6 +34,10 @@ function viewport() {
     }
 };
 /* viewport width */
+$(window).on('resize load', function() {
+    var height_block = $('.js-main-slider').outerHeight();
+    $('.main-slider__item_with-bg').css({'height': height_block});
+});
 
 $(document).ready(function () {
 
