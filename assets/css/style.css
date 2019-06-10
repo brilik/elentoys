@@ -2159,7 +2159,6 @@ input:focus + .input-icon i {
     display: block;
     text-align: center;
     min-width: 270px;
-    max-width: 270px;
     border-radius: 40px;
     font-family: 'Nefelibata SansCd';
     font-size: 30px;
@@ -4581,6 +4580,11 @@ input:focus + .input-icon i {
         bottom: -10%;
         max-width: 205px;
     }
+    .main-slider__right .btn{
+        height: auto !important;
+        padding-bottom: 7px;
+        transform: translate(0) !important;
+    }
 
     .feedback-wrapper .blog-section_feedback .blog-section__top:before {
         max-width: 275px;
@@ -6240,6 +6244,7 @@ input:focus + .input-icon i {
 
 .product-wrapper .novelty-slider__picture img {
     max-height: 240px;
+    min-height: 230px;
     height: auto;
     width: auto; 
 }
@@ -11620,7 +11625,26 @@ input:focus + .input-icon i {
 }
 
 .main-slider__right .btn {
-    /*margin-left: 25px;*/
+    display: inline-block;
+}
+.main-slider__right .btn:before {
+    content: '';
+    position: absolute;
+    width: 108%;
+    height: 200px;
+    display: block;
+    background-size: contain;
+    left: 0px;
+    top: -65px;
+    opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    pointer-events: none;
+    background-position: center !important;
+}
+.main-slider__right .btn:hover:before{
+    opacity: 1;
 }
 
 .main-slider__text {
