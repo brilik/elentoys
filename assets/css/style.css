@@ -6361,7 +6361,6 @@ input:focus + .input-icon i {
     }
 }
 
-
 @media screen and (max-width: 1023px) {
     .product-wrapper .novetly-slider {
         margin-top: 35px;
@@ -6535,6 +6534,11 @@ input:focus + .input-icon i {
     .product-section__box {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+    footer::before{
+        bottom: 39px !important;
     }
 }
 
@@ -7175,7 +7179,7 @@ input:focus + .input-icon i {
         padding-left: 20px;
         padding-top: 5px;
         padding-left: 0;
-        padding-top: 21px;
+        padding-top: 0;
         padding-right: 0;
     }
 
@@ -8612,8 +8616,8 @@ input:focus + .input-icon i {
     }
 
     footer::before {
-        background-size: 150% auto;
-        bottom: 45px;
+        background-size: 120% auto;
+        bottom: 27px;
         left: 0;
     }
 
@@ -9468,6 +9472,7 @@ input:focus + .input-icon i {
     }
 
     footer::before {
+        bottom: 2px;
         background-size: contain;
     }
 }
@@ -9477,6 +9482,10 @@ input:focus + .input-icon i {
         width: 250px;
         height: 250px;
         margin-left: -125px;
+    }
+    footer::before {
+        bottom: 0;
+        background-size: contain;
     }
 }
 
@@ -9499,11 +9508,18 @@ input:focus + .input-icon i {
         padding-left: 0;
         padding-right: 0;
     }
+    .about-section__situation{
+        margin-bottom: 40px;
+    }
 
     .novelty-slider__round {
         width: 271px;
         height: 271px;
         margin-left: -135.5px;
+    }
+
+    footer::before{
+        bottom: -10px;
     }
 
     .main-slider .next-arrow {
@@ -11535,7 +11551,7 @@ input:focus + .input-icon i {
     .about-section__seven::after {
         height: 100px;
         background-size: 600px auto;
-        top: 53px;
+        top: 0;
         background-position: -120px 0;
     }
 
@@ -12833,5 +12849,8 @@ input:focus + .input-icon i {
     }
     .categories-item__pict:before{
         width: 100%;
+    }
+    footer::before{
+        bottom: -18px;
     }
 }
