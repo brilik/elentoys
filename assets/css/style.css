@@ -2839,6 +2839,7 @@ input:focus + .input-icon i {
     width: auto;
     object-fit: contain;
     margin: 0 auto;
+    width: 100%;
 }
 
 @media (max-width: 1780px) {
@@ -7176,9 +7177,9 @@ input:focus + .input-icon i {
         width: 51.1%;
         padding-left: 20px;
         padding-top: 5px;
-        padding-left: 25px;
+        padding-left: 0;
         padding-top: 21px;
-        padding-right: 30px;
+        padding-right: 0;
     }
 
     .blog-price__description {
@@ -7291,15 +7292,15 @@ input:focus + .input-icon i {
         width: 100%;
     }
 
-    .blog-price__img img {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 260px;
-    }
-
     .blog-price__img {
         text-align: center;
         padding-top: 0;
+    }
+
+    .blog-price__item .blog-price__img{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 260px;
     }
 
     .blog-price__description {
@@ -8265,18 +8266,17 @@ input:focus + .input-icon i {
         height: 200px;
     }
 
-    .categories-item__pict.blue-bg:before,
-    .categories-item__pict.pink-bg:before{
+    .categories-item__pict:before{
         width: 100%;
     }
 
-    .categories-item__pict.blue-bg:after,
-    .categories-item__pict.pink-bg:after{
+    .categories-item__pict:after,
+    .categories-item__pict:after{
         width: 90%;
         height: 90%;
     }
-    .categories-item__pict.blue-bg:before,
-    .categories-item__pict.pink-bg:before{
+    .categories-item__pict:before,
+    .categories-item__pict:before{
         height: 200px;
     }
 
@@ -8683,12 +8683,12 @@ input:focus + .input-icon i {
         height: 190px;
     }
 
-    .categories-item__pict.blue-bg:before, .categories-item__pict.pink-bg:before {
+    .categories-item__pict:before{
         height: 140px;
         width: 170px;
     }
 
-    .categories-item__pict.blue-bg:after, .categories-item__pict.pink-bg:after {
+    .categories-item__pict:after{
         width: 140px;
         height: 85%;
     }
@@ -12829,7 +12829,7 @@ input:focus + .input-icon i {
     .new-section__img.img3 img {
         left: -59px;
     }
-    .categories-item__pict.blue-bg:before, .categories-item__pict.pink-bg:before{
+    .categories-item__pict:before{
         width: 100%;
     }
 }
