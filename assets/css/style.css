@@ -4017,15 +4017,12 @@ input:focus + .input-icon i {
     margin-top: 20px;
 }
 
-.delivery-town-box {
-    overflow-y: auto;
-}
-
 .delivery-town {
     margin-top: 50px;
     width: 100%;
     max-width: 920px;
     max-height: 440px;
+    overflow-y: auto;
 }
 
 .delivery-town::before {
@@ -7475,6 +7472,11 @@ input:focus + .input-icon i {
     margin-right: auto;
     margin-top: 28px;
     margin-bottom: 52px;
+}
+.note-section__img img {
+    max-height: 510px;
+    object-fit: cover;
+    border-radius: 40px;
 }
 
 .note-section__img.img2 {
