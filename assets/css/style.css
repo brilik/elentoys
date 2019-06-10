@@ -2795,7 +2795,13 @@ input:focus + .input-icon i {
     position: relative;
 }
 
-.categories-item__pict.blue-bg:before{
+.categories__item:nth-child(odd) .categories-item__pict:before{
+    background-color: #a4e6f8;
+}
+.categories__item:nth-child(even) .categories-item__pict:before{
+    background-color: #f3ccd9;
+}
+.categories-item__pict:before{
     content: '';
     height: 250px;
     width: 270px;
@@ -2810,38 +2816,7 @@ input:focus + .input-icon i {
     z-index: -1;
     border-radius: 39% 61% 43% 57% / 61% 65% 35% 39%;
 }
-.categories-item__pict.blue-bg:after{
-    content: '';
-    height: 205px;
-    width: 220px;
-    top: 50%;
-    text-align: center;
-    margin: 0 auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    border: 1px dashed #fff;
-    position: absolute;
-    border-radius: 39% 61% 43% 57% / 61% 65% 35% 39%;
-    z-index: -1;
-}
-
-.categories-item__pict.pink-bg:before{
-    content: '';
-    height: 250px;
-    width: 270px;
-    top: 0;
-    text-align: center;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    background-color: #f3ccd9;
-    position: absolute;
-    z-index: -1;
-    border-radius: 39% 61% 43% 57% / 61% 65% 35% 39%;
-}
-.categories-item__pict.pink-bg:after{
+.categories-item__pict:after{
     content: '';
     height: 205px;
     width: 220px;
@@ -2862,8 +2837,8 @@ input:focus + .input-icon i {
     display: block;
     height: 100%;
     width: auto;
+    object-fit: contain;
     margin: 0 auto;
-    border-radius: 39% 61% 43% 57% / 61% 65% 35% 39%;
 }
 
 @media (max-width: 1780px) {
@@ -3434,7 +3409,7 @@ input:focus + .input-icon i {
     object-fit: cover;
     width: 100%;
     border-bottom: 17px solid rgba(137, 69, 159, 0.6);
-    border-radius: 36% 64% 63% 37% / 54% 54% 46% 46%;
+    border-radius: 28% 72% 70% 30% / 66% 46% 54% 34%;
 }
 
 .about-me__photo:before {
@@ -6824,10 +6799,10 @@ input:focus + .input-icon i {
 
 .blog-section__top {
     background: url(../img/blog-bg.png);
-    background-size: cover;
+    background-size: cover !important;
     min-height: 700px;
     position: relative;
-    background-position: center;
+    background-position: center !important;
 }
 
 .blog-section__top::after {
@@ -8684,6 +8659,16 @@ input:focus + .input-icon i {
     .advantages-slider__item_last:after {
         width: 143px;
         height: 190px;
+    }
+
+    .categories-item__pict.blue-bg:before, .categories-item__pict.pink-bg:before {
+        height: 140px;
+        width: 170px;
+    }
+
+    .categories-item__pict.blue-bg:after, .categories-item__pict.pink-bg:after {
+        width: 140px;
+        height: 85%;
     }
 
     .about-me__text,
@@ -12821,5 +12806,8 @@ input:focus + .input-icon i {
 @media screen and (max-width: 370px) {
     .new-section__img.img3 img {
         left: -59px;
+    }
+    .categories-item__pict.blue-bg:before, .categories-item__pict.pink-bg:before{
+        width: 100%;
     }
 }
