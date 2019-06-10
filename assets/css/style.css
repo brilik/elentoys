@@ -4843,7 +4843,7 @@ input:focus + .input-icon i {
 
 .feedback-list__img {
     max-width: 330px;
-    max-height: 330px;
+    height: 330px;
     width: 100%;
     margin-right: 50px;
     margin-left: 16px;
@@ -12687,7 +12687,6 @@ input:focus + .input-icon i {
 
     .delivery-town {
         border-radius: 0;
-        overflow: visible;
     }
 
     .delivery-town__header:after {
