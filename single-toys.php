@@ -116,7 +116,6 @@ $query = new WP_Query($args);
                         }
 
                         the_content();
-
                         ?>
                         <div class="proudct-description__row">
                             <div class="product-description__price">
@@ -127,13 +126,11 @@ $query = new WP_Query($args);
                                         class="btn__icon btn__icon_reverse">.</span></a>
                         </div>
 
-                        <?php echo elentoys_the_social('social social_product', 3, array('telegram', 'inst', 'vk', 'viber', 'whatsapp'), get_the_title()); ?>
+                        <?php echo elentoys_the_social('social social_product', 3, array('telegram', 'inst', 'vk', 'viber'), get_the_title()); ?>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!--                <a href="#" class="back-call"><i class="zmdi zmdi-phone"></i></a>-->
     </section>
 
     <?php if ($query->have_posts()) : ?>
