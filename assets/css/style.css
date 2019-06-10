@@ -7103,7 +7103,7 @@ input:focus + .input-icon i {
         max-width: 422px;
         height: 362px;
         bottom: -35px;
-        right: -113px;
+        right: 10px;
     }
 
     .blog-section__top::after {
@@ -7267,7 +7267,10 @@ input:focus + .input-icon i {
         padding-right: 17px;
     }
     .blog-price__img {
-        max-height: 250px;
+        height: 250px;
+    }
+    .blog-price__img img{
+        height: 100%;
     }
 }
 
@@ -9472,7 +9475,7 @@ input:focus + .input-icon i {
     }
 
     footer::before {
-        bottom: 2px;
+        bottom: 6px;
         background-size: contain;
     }
 }
@@ -12527,6 +12530,10 @@ input:focus + .input-icon i {
 
     .main-slider__item_with-bg .main-slider__right .h1-descr {
         min-height: 200px;
+    }
+
+    .feedback-list__img{
+        height: 330px;
     }
 
     .btn {
