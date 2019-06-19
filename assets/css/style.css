@@ -6062,7 +6062,7 @@ input:focus + .input-icon i {
     max-height: inherit;
     overflow: hidden;
     position: relative;
-    height: 350px;
+    height: 550px;
 }
 
 .product-section__box {
@@ -6379,6 +6379,10 @@ input:focus + .input-icon i {
         max-width: 100%;
     }
 
+	.product-for__pict{
+   		height: 350px;
+   	}
+   	
     .slider-nav__pict {
         max-width: 56px;
         min-height: 48px;
