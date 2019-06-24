@@ -20,7 +20,10 @@ $args = array(
         )
     )
 );
-$query = new WP_Query($args); ?>
+$query = new WP_Query($args);
+
+$customSlider = get_field('customSlider', 18); // 18 - template category
+?>
 
     <!-- BEGIN BODY -->
 
@@ -31,8 +34,10 @@ $query = new WP_Query($args); ?>
     <main class="content">
 
         <section class="blog-section blog-section_category">
-            <div class="blog-section__top" data-mob-href="img/slide-with-bg.jpg"
-                 data-tab-href="img/slide-with-bg-tab.jpg">
+            <div class="blog-section__top"
+                 data-mob-href="<?php echo get_template_directory_uri(); ?>/assets/img/slide-with-bg.jpg"
+                 data-tab-href="<?php echo get_template_directory_uri(); ?>/assets/img/slide-with-bg-tab.jpg"
+                 style="background-color:<?php echo $customSlider['back_color']; ?>;">
                 <div class="blog-top__wrap">
                     <h1 class="blog-top__title">
                         <?php single_cat_title(); ?>

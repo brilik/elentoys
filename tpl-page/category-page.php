@@ -4,6 +4,7 @@
  */
 
 get_template_part('tpl-part/head');
+$customSlider = get_field('customSlider');
 ?>
 
     <div class="main-wrapper blog-wrapper">
@@ -12,8 +13,10 @@ get_template_part('tpl-part/head');
 
     <main class="content">
         <section class="blog-section blog-section_category">
-            <div class="blog-section__top" data-mob-href="<?php echo get_template_directory_uri();?>/assets/img/slide-with-bg.jpg"
-                 data-tab-href="<?php echo get_template_directory_uri();?>/assets/img/slide-with-bg-tab.jpg">
+            <div class="blog-section__top"
+                 data-mob-href="<?php echo get_template_directory_uri();?>/assets/img/slide-with-bg.jpg"
+                 data-tab-href="<?php echo get_template_directory_uri();?>/assets/img/slide-with-bg-tab.jpg"
+                 style="background-color:<?php echo $customSlider['back_color']; ?>;">
                 <div class="blog-top__wrap">
                     <h1 class="blog-top__title">
                         Категории
