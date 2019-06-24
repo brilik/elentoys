@@ -4,6 +4,8 @@
  */
 
 get_template_part('tpl-part/head');
+
+$customSlider = get_field('customSlider');
 ?>
 
 <!-- BEGIN BODY -->
@@ -14,13 +16,16 @@ get_template_part('tpl-part/head');
 
 		<main class="content">
 			<section class="blog-section blog-section_feedback">
-                <div class="blog-section__top" style="background-image: url('<?php get_field('review_img')['url']; ?>')"
+                <div class="blog-section__top" style="
+                     background-image: url('<?php echo get_field('review_img')['url']; ?>');
+                    background-color:<?php echo $customSlider['back_color']; ?>;"
                      data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
                      data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
-					<div class="feedback-bg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feedback/feedback-girl.png"
-                             alt="feedback-bg">
+					<?php if($customSlider['toyLeft']): ?>
+                    <div class="feedback-bg">
+                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg">
 					</div>
+					<?php endif; ?>
 					<div class="blog-top__wrap">
 						<h1 class="blog-top__title">
 							отзывы
