@@ -173,7 +173,7 @@ $tax_type = 'toys_category';
 
                 endif; ?>
             </div>
-<<<<<<< HEAD
+
             <div class="main-slider js-main-slider tablet-slider">
 
                 <?php
@@ -484,8 +484,6 @@ $tax_type = 'toys_category';
 
                 endif; ?>
             </div>
-=======
->>>>>>> 270d84749147036a8a01908364c14e41a3521b13
         </section>
 
         <section class="section section_category">
