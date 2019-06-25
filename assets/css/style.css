@@ -4898,6 +4898,7 @@ input:focus + .input-icon i {
     font-family: 'Nefelibata Script';
     font-size: 36px;
     font-weight: 400;
+    display: inline-block;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
@@ -10443,6 +10444,18 @@ input:focus + .input-icon i {
 .about-other__img img {
     max-width: 100%;
 }
+    
+.main-slider{
+    display: block;
+}
+
+.main-slider.tablet-slider{
+    display: none;
+}
+
+.main-slider.mobile-slider{
+    display: none;
+}
 
 @media screen and (min-width: 2200px) {
     .about-section__seven {
@@ -10534,6 +10547,18 @@ input:focus + .input-icon i {
     .about-wrapper .blog-top__title {
         font-size: 60px;
         letter-spacing: 2.5px;
+    }
+
+    .main-slider{
+        display: none;
+    }
+
+    .main-slider.tablet-slider{
+        display: block;
+    }
+
+   .main-slider.mobile-slider{
+        display: none;
     }
 
     .about-wrapper .blog-section__top {
@@ -11004,6 +11029,18 @@ input:focus + .input-icon i {
 @media screen and (max-width: 767px) {
     .about-wrapper .blog-top__title {
         font-size: 48px;
+    }
+
+    .main-slider{
+        display: none;
+    }
+
+    .main-slider.tablet-slider{
+        display: none;
+    }
+
+   .main-slider.mobile-slider{
+        display: block;
     }
 
     .about-wrapper main .wrapper {
