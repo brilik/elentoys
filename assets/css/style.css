@@ -12654,8 +12654,8 @@ input:focus + .input-icon i {
         margin-left: 0;
         margin-right: auto;
         height: 57px;
-        line-height: 50px;
-        font-size: 30px;
+        line-height: 35px;
+        font-size: 28px;
     }
 
     .header.active .logo {
