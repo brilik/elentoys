@@ -12295,9 +12295,6 @@ input:focus + .input-icon i {
     display: flex;
     margin-left: 2px;
 }
-.page-template-delivery .blog-top__title{
-    padding-top: 150px;
-}
 .block-desktop{
     display: block;
 }
