@@ -24,8 +24,8 @@ $customSlider = get_field('customSlider')
                         <?php the_title(); ?>
                     </h1>
                 </div>
-                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
-                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
             </div>
             <div class="blog-section__top block-table"
                  style="background-image: url('<?php echo $left['banner']; ?>');
@@ -37,8 +37,8 @@ $customSlider = get_field('customSlider')
                         <?php the_title(); ?>
                     </h1>
                 </div>
-                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
-                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
             </div>
             <div class="blog-section__top block-phone"
                  style="background-image: url('<?php echo $left['banner']; ?>');
@@ -50,8 +50,8 @@ $customSlider = get_field('customSlider')
                         <?php the_title(); ?>
                     </h1>
                 </div>
-                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
-                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
             </div>
             <div class="blog-section__price">
                 <div class="wrapper">

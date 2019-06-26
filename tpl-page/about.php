@@ -12,7 +12,7 @@ $customSlider = get_field('customSlider');
     <!-- BEGIN CONTENT -->
 
     <main class="content">
-        <section class="about-section">
+        <section class="about-section block-desktop">
             <div class="blog-section__top"
                  style="background-image: url(<?php the_field('banner_img'); ?>);
                          background-color:<?php echo $customSlider['back_color']; ?>;"
@@ -23,6 +23,38 @@ $customSlider = get_field('customSlider');
                         <?php the_title(); ?>
                     </h1>
                 </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+            </div>
+        </section>
+        <section class="about-section block-table">
+            <div class="blog-section__top"
+                 style="background-image: url(<?php the_field('banner_img'); ?>);
+                         background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php the_field('banner_img_mob'); ?>"
+                 data-tab-href="<?php the_field('banner_img_tab'); ?>">
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        <?php the_title(); ?>
+                    </h1>
+                </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+            </div>
+        </section>
+        <section class="about-section block-phone">
+            <div class="blog-section__top"
+                 style="background-image: url(<?php the_field('banner_img'); ?>);
+                         background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php the_field('banner_img_mob'); ?>"
+                 data-tab-href="<?php the_field('banner_img_tab'); ?>">
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        <?php the_title(); ?>
+                    </h1>
+                </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
             </div>
         </section>
 

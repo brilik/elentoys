@@ -16,7 +16,7 @@ $customSlider = get_field('customSlider');
 
     <main class="content">
         <section class="blog-section blog-section_feedback">
-            <div class="blog-section__top" style="
+            <div class="blog-section__top block-desktop" style="
                     background-image: url('<?php echo get_field('review_img')['url']; ?>');
                     background-color:<?php echo $customSlider['back_color']; ?>;"
                  data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
@@ -32,6 +32,46 @@ $customSlider = get_field('customSlider');
                         отзывы
                     </h1>
                 </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+            </div>
+            <div class="blog-section__top block-table" style="
+                    background-image: url('<?php echo get_field('review_img')['url']; ?>');
+                    background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
+                 data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
+                <?php if ($customSlider['toyLeft']): ?>
+                    <div class="feedback-bg">
+                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg"
+                             style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,<?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
+                    </div>
+                <?php endif; ?>
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        отзывы
+                    </h1>
+                </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+            </div>
+            <div class="blog-section__top block-phone" style="
+                    background-image: url('<?php echo get_field('review_img')['url']; ?>');
+                    background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
+                 data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
+                <?php if ($customSlider['toyLeft']): ?>
+                    <div class="feedback-bg">
+                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg"
+                             style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,<?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
+                    </div>
+                <?php endif; ?>
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        отзывы
+                    </h1>
+                </div>
+                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
             </div>
             <div class="blog-section__price">
                 <div class="wrapper">
