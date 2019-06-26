@@ -16,7 +16,7 @@ $customSlider = get_field('customSlider');
     <main class="content">
         <?php while (have_posts()) : the_post(); ?>
             <section class="blog-section">
-                <div class="blog-section__top" style="
+                <div class="blog-section__top block-desktop" style="
                         background-image: url('<?php echo $bckg['banner']; ?>');
                         background-color:<?php echo $customSlider['back_color']; ?>;"
                      data-mob-href="<?php echo $bckg['banner_mob']; ?>"
@@ -26,6 +26,34 @@ $customSlider = get_field('customSlider');
                             Запись блога
                         </h1>
                     </div>
+                    <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                    <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                </div>
+                <div class="blog-section__top block-table" style="
+                        background-image: url('<?php echo $bckg['banner']; ?>');
+                        background-color:<?php echo $customSlider['back_color']; ?>;"
+                     data-mob-href="<?php echo $bckg['banner_mob']; ?>"
+                     data-tab-href="<?php echo $bckg['banner_table']; ?>">
+                    <div class="blog-top__wrap">
+                        <h1 class="blog-top__title">
+                            Запись блога
+                        </h1>
+                    </div>
+                    <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                    <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                </div>
+                <div class="blog-section__top block-phone" style="
+                        background-image: url('<?php echo $bckg['banner']; ?>');
+                        background-color:<?php echo $customSlider['back_color']; ?>;"
+                     data-mob-href="<?php echo $bckg['banner_mob']; ?>"
+                     data-tab-href="<?php echo $bckg['banner_table']; ?>">
+                    <div class="blog-top__wrap">
+                        <h1 class="blog-top__title">
+                            Запись блога
+                        </h1>
+                    </div>
+                    <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                    <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
                 </div>
                 <div class="blog-section__price">
                     <div class="wrapper">
