@@ -14,7 +14,7 @@ $customSlider = get_field('customSlider')
     <main class="content">
         <section class="blog-section">
             <?php $left = get_field('bckg'); ?>
-            <div class="blog-section__top"
+            <div class="blog-section__top block-desktop"
                  style="background-image: url('<?php echo $left['banner']; ?>');
                  background-color:<?php echo $customSlider['back_color']; ?>;"
                  data-mob-href="<?php echo $left['banner_mob']; ?>"
@@ -24,6 +24,34 @@ $customSlider = get_field('customSlider')
                         <?php the_title(); ?>
                     </h1>
                 </div>
+                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+            </div>
+            <div class="blog-section__top block-table"
+                 style="background-image: url('<?php echo $left['banner']; ?>');
+                 background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php echo $left['banner_mob']; ?>"
+                 data-tab-href="<?php echo $left['banner_table']; ?>">
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        <?php the_title(); ?>
+                    </h1>
+                </div>
+                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+            </div>
+            <div class="blog-section__top block-phone"
+                 style="background-image: url('<?php echo $left['banner']; ?>');
+                 background-color:<?php echo $customSlider['back_color']; ?>;"
+                 data-mob-href="<?php echo $left['banner_mob']; ?>"
+                 data-tab-href="<?php echo $left['banner_table']; ?>">
+                <div class="blog-top__wrap">
+                    <h1 class="blog-top__title">
+                        <?php the_title(); ?>
+                    </h1>
+                </div>
+                <img class="toy-top"> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
+                <img class="toy-top toy-top-right "> src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-s.png" alt="">
             </div>
             <div class="blog-section__price">
                 <div class="wrapper">
