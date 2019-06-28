@@ -4,74 +4,81 @@
  */
 
 get_template_part('tpl-part/head');
-
 $customSlider = get_field('customSlider');
+$toysLeft = $customSlider['left'];
+$toysRight = $customSlider['right'];
+$toysLeftTab = $customSlider['left_tab'];
+$toysRightTab = $customSlider['right_tab'];
+$toysLeftMob = $customSlider['left_mob'];
+$toysRightMob = $customSlider['right_mob'];
 ?>
-
     <!-- BEGIN BODY -->
-
     <div class="main-wrapper blog-wrapper">
-
     <!-- BEGIN CONTENT -->
-
     <main class="content">
         <section class="blog-section blog-section_feedback">
-            <div class="blog-section__top block-desktop" style="
-                    background-image: url('<?php echo get_field('review_img')['url']; ?>');
-                    background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
-                 data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
-                <?php if ($customSlider['toyLeft']): ?>
-                    <div class="feedback-bg">
-                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg"
-                             style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,<?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
-                    </div>
-                <?php endif; ?>
+            <div class="blog-section__top block-desktop"
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        отзывы
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeft['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeft['img']['url']; ?>"
+                         alt="<?php echo $toysLeft['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeft['positionX']; ?>px,
+                         <?php echo $toysLeft['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysRight['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysRight['img']['url']; ?>"
+                         alt="<?php echo $toysRight['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysRight['positionX']; ?>px,
+                         <?php echo $toysRight['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
-            <div class="blog-section__top block-table" style="
-                    background-image: url('<?php echo get_field('review_img')['url']; ?>');
-                    background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
-                 data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
-                <?php if ($customSlider['toyLeft']): ?>
-                    <div class="feedback-bg">
-                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg"
-                             style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,<?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
-                    </div>
-                <?php endif; ?>
+            <div class="blog-section__top block-table"
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        отзывы
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeftTab['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeftTab['img']['url']; ?>"
+                         alt="<?php echo $toysLeftTab['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftTab['positionX']; ?>px,
+                         <?php echo $toysLeftTab['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysRightTab['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysRightTab['img']['url']; ?>"
+                         alt="<?php echo $toysRightTab['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysRightTab['positionX']; ?>px,
+                         <?php echo $toysRightTab['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
-            <div class="blog-section__top block-phone" style="
-                    background-image: url('<?php echo get_field('review_img')['url']; ?>');
-                    background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php echo get_field('review_img_mob')['url']; ?>"
-                 data-tab-href="<?php echo get_field('review_img_tab')['url']; ?>">
-                <?php if ($customSlider['toyLeft']): ?>
-                    <div class="feedback-bg">
-                        <img src="<?php echo $customSlider['img_toy_left']; ?>" alt="feedback-bg"
-                             style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,<?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
-                    </div>
-                <?php endif; ?>
+            <div class="blog-section__top block-phone"
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        отзывы
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeftMob['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeftMob['img']['url']; ?>"
+                         alt="<?php echo $toysLeftMob['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftMob['positionX']; ?>px,
+                         <?php echo $toysLeftMob['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysLeftMob['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysLeftMob['img']['url']; ?>"
+                         alt="<?php echo $toysLeftMob['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftMob['positionX']; ?>px,
+                         <?php echo $toysLeftMob['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
             <div class="blog-section__price">
                 <div class="wrapper">
@@ -102,13 +109,8 @@ $customSlider = get_field('customSlider');
                     <?php endif; ?>
                 </div>
             </div>
-
-            <!--<div class="blog-section__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog11.png" alt=""></div>-->
         </section>
     </main>
-
     <!-- CONTENT EOF   -->
-
 <?php get_header(); ?>
-
 <?php get_footer(); ?>

@@ -4,8 +4,13 @@
  */
 
 get_template_part('tpl-part/head');
-
 $customSlider = get_field('customSlider');
+$toysLeft = $customSlider['left'];
+$toysRight = $customSlider['right'];
+$toysLeftTab = $customSlider['left_tab'];
+$toysRightTab = $customSlider['right_tab'];
+$toysLeftMob = $customSlider['left_mob'];
+$toysRightMob = $customSlider['right_mob'];
 ?>
     <div class="main-wrapper about-wrapper">
 
@@ -14,47 +19,71 @@ $customSlider = get_field('customSlider');
     <main class="content">
         <section class="about-section block-desktop">
             <div class="blog-section__top"
-                 style="background-image: url(<?php the_field('banner_img'); ?>);
-                         background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php the_field('banner_img_mob'); ?>"
-                 data-tab-href="<?php the_field('banner_img_tab'); ?>">
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        <?php the_title(); ?>
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeft['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeft['img']['url']; ?>"
+                         alt="<?php echo $toysLeft['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeft['positionX']; ?>px,
+                         <?php echo $toysLeft['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysRight['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysRight['img']['url']; ?>"
+                         alt="<?php echo $toysRight['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysRight['positionX']; ?>px,
+                         <?php echo $toysRight['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
         </section>
         <section class="about-section block-table">
             <div class="blog-section__top"
-                 style="background-image: url(<?php the_field('banner_img'); ?>);
-                         background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php the_field('banner_img_mob'); ?>"
-                 data-tab-href="<?php the_field('banner_img_tab'); ?>">
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        <?php the_title(); ?>
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeftTab['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeftTab['img']['url']; ?>"
+                         alt="<?php echo $toysLeftTab['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftTab['positionX']; ?>px,
+                         <?php echo $toysLeftTab['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysRightTab['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysRightTab['img']['url']; ?>"
+                         alt="<?php echo $toysRightTab['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysRightTab['positionX']; ?>px,
+                         <?php echo $toysRightTab['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
         </section>
         <section class="about-section block-phone">
             <div class="blog-section__top"
-                 style="background-image: url(<?php the_field('banner_img'); ?>);
-                         background-color:<?php echo $customSlider['back_color']; ?>;"
-                 data-mob-href="<?php the_field('banner_img_mob'); ?>"
-                 data-tab-href="<?php the_field('banner_img_tab'); ?>">
+                 data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                 data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                 style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                 <div class="blog-top__wrap">
-                    <h1 class="blog-top__title">
-                        <?php the_title(); ?>
-                    </h1>
+                    <h1 class="blog-top__title"><?php the_title(); ?></h1>
                 </div>
-                <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                <?php if ($toysLeftMob['show']): ?>
+                    <img class="toy-top" src="<?php echo $toysLeftMob['img']['url']; ?>"
+                         alt="<?php echo $toysLeftMob['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftMob['positionX']; ?>px,
+                         <?php echo $toysLeftMob['positionY']; ?>px)!important;"
+                    >
+                <?php endif; ?>
+                <?php if ($toysLeftMob['show']): ?>
+                    <img class="toy-top toy-top-right" src="<?php echo $toysLeftMob['img']['url']; ?>"
+                         alt="<?php echo $toysLeftMob['img']['alt']; ?>"
+                         style="transform: translate(<?php echo $toysLeftMob['positionX']; ?>px,
+                         <?php echo $toysLeftMob['positionY']; ?>px)!important;">
+                <?php endif; ?>
             </div>
         </section>
 
