@@ -3637,7 +3637,7 @@ input:focus + .input-icon i {
 }
 
 .wrapper-404 {
-    padding: 150px 0 0 0;
+    padding: 84px 0 0 0;
 }
 
 .content_404 {
@@ -3648,6 +3648,9 @@ input:focus + .input-icon i {
 
 .section-404 {
     margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
 }
 
 .section-404__wrapper {
