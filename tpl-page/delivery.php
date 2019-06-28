@@ -4,8 +4,13 @@
  */
 
 get_template_part('tpl-part/head');
-
 $customSlider = get_field('customSlider');
+$toysLeft = $customSlider['left'];
+$toysRight = $customSlider['right'];
+$toysLeftTab = $customSlider['left_tab'];
+$toysRightTab = $customSlider['right_tab'];
+$toysLeftMob = $customSlider['left_mob'];
+$toysRightMob = $customSlider['right_mob'];
 ?>
     <div class="main-wrapper blog-wrapper feedback-wrapper">
 
@@ -14,11 +19,10 @@ $customSlider = get_field('customSlider');
         <main class="content">
 
             <section class="blog-section blog-section_feedback">
-                <div class="blog-section__top block-desktop" style="
-                        background-image:url('<?php echo get_field('banner_img')['url']; ?>');
-                            background-color:<?php echo $customSlider['back_color']; ?>;"
-                         data-mob-href="<?php echo get_field('banner_img_mob')['url']; ?>"
-                         data-tab-href="<?php echo get_field('banner_img_tab')['url']; ?>">
+                <div class="blog-section__top block-desktop"
+                     data-mob-href="<?php echo $customSlider['imgMob']; ?>"
+                     data-tab-href="<?php echo $customSlider['imgTab']; ?>"
+                     style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
                     <?php if ($customSlider['toyLeft']): ?>
                         <div class="feedback-bg">
                             <img src="<?php echo $customSlider['img_toy_left']; ?>" alt=""

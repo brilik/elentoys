@@ -5,7 +5,6 @@
 
 get_template_part('tpl-part/head');
 $customSlider = get_field('customSlider');
-$customSlider = get_field('customSlider');
 $toysLeft = $customSlider['left'];
 $toysRight = $customSlider['right'];
 $toysLeftTab = $customSlider['left_tab'];
