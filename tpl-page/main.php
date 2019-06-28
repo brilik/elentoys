@@ -84,7 +84,7 @@ $tax_type = 'toys_category';
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important; alt="">
+                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
                                         <?php if($title_show): ?><h1 class="h1"
@@ -240,7 +240,7 @@ $tax_type = 'toys_category';
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important; alt="">
+                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
                                         <?php if($title_show): ?><h1 class="h1"
@@ -395,7 +395,7 @@ $tax_type = 'toys_category';
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important; alt="">
+                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
                                         <?php if($title_show): ?><h1 class="h1"
