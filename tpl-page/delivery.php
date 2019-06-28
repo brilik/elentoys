@@ -23,20 +23,24 @@ $toysRightMob = $customSlider['right_mob'];
                      data-mob-href="<?php echo $customSlider['imgMob']; ?>"
                      data-tab-href="<?php echo $customSlider['imgTab']; ?>"
                      style="background: <?php echo $customSlider['back_color']; ?> url('<?php echo $customSlider['imgDesc']; ?>') no-repeat;">
-                    <?php if ($customSlider['toyLeft']): ?>
-                        <div class="feedback-bg">
-                            <img src="<?php echo $customSlider['img_toy_left']; ?>" alt=""
-                                 style="transform: translate(<?php echo $customSlider['toyLeftPosition_x']; ?>px,
-                                 <?php echo $customSlider['toyLeftPosition_y']; ?>px)!important;">
-                        </div>
-                    <?php endif; ?>
                     <div class="blog-top__wrap">
                         <h1 class="blog-top__title">
                             <?php the_title(); ?>
                         </h1>
                     </div>
-                    <img class="toy-top" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
-                    <img class="toy-top toy-top-right" src="http://elen-toys.workteamhtml.com/wp-content/themes/elentoys/assets/img/blog11.png" alt="">
+                    <?php if ($toysLeft['show']): ?>
+                        <img class="toy-top" src="<?php echo $toysLeft['img']['url']; ?>"
+                             alt="<?php echo $toysLeft['img']['alt']; ?>"
+                             style="transform: translate(<?php echo $toysLeft['positionX']; ?>px,
+                             <?php echo $toysLeft['positionY']; ?>px)!important;"
+                        >
+                    <?php endif; ?>
+                    <?php if ($toysRight['show']): ?>
+                        <img class="toy-top toy-top-right" src="<?php echo $toysRight['img']['url']; ?>"
+                             alt="<?php echo $toysRight['img']['alt']; ?>"
+                             style="transform: translate(<?php echo $toysRight['positionX']; ?>px,
+                             <?php echo $toysRight['positionY']; ?>px)!important;">
+                    <?php endif; ?>
                 </div>
                 <div class="blog-section__top block-table" style="
                         background-image:url('<?php echo get_field('banner_img')['url']; ?>');
