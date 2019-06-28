@@ -2559,6 +2559,14 @@ input:focus + .input-icon i {
     .social {
         left: 0px;
     }
+    .main-slider__img.img1{
+        max-width: 100%;
+        width: 100%;
+    }
+    .main-slider__item_with-bg .main-slider__right{
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .section_main {
