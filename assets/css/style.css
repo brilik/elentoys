@@ -3651,6 +3651,7 @@ input:focus + .input-icon i {
     background-position: center;
     background-size: cover;
     width: 100%;
+    background-repeat: no-repeat;
 }
 
 .section-404__wrapper {

@@ -6,7 +6,7 @@
 
     <main class="content content_404">
         <?php $left = get_field('404_left','options'); ?>
-        <section class="section-404"
+        <section class="section-404 block-desktop"
                  style="background-image: url(<?php echo $left['404_banner']; ?>)"
                  data-mob-href="<?php echo $left['404_banner_table']; ?>"
                  data-tab-href="<?php echo $left['404_banner_mob']; ?>">
