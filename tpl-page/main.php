@@ -10,16 +10,11 @@ global $posts, $post;
 $post_type = 'toys';
 $tax_type = 'toys_category';
 ?>
-
     <div class="main-wrapper main-page">
-
     <!-- BEGIN CONTENT -->
-
     <main class="content">
-
         <section class="section section_main">
             <div class="main-slider js-main-slider">
-
                 <?php
                 $section = get_field('slider_add');
 
@@ -30,9 +25,9 @@ $tax_type = 'toys_category';
                         if ($item['hide']) continue;
 
                         // todo option background
-                        $imgBckgr = ( $item['bckgr'] )? $item['bckgr'] : '';
-                        $imgBckgrMob = ( $item['bckgr_mob'] )? $item['bckgr_mob'] : '';
-                        $imgBckgrTab = ( $item['bckgr_tab'] )? $item['bckgr_tab'] : '';
+                        $imgBckgr = ($item['bckgr']) ? $item['bckgr'] : '';
+                        $imgBckgrMob = ($item['bckgr_mob']) ? $item['bckgr_mob'] : '';
+                        $imgBckgrTab = ($item['bckgr_tab']) ? $item['bckgr_tab'] : '';
 
                         // todo option title
                         $title = $item['title'];
@@ -70,35 +65,39 @@ $tax_type = 'toys_category';
                         $link['target'] = (!empty($item['link']['target'])) ? $item['link']['target'] : '';
 
                         if ($item['position'] == 2) { ?>
-
                             <div class="main-slider__item main-slider__item_with-bg"
                                  style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
                                  data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
-                                        <?php if($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
-                                             style="transform: translate(<?php echo $positionImg; ?>px,
-                                             <?php echo $positionImgY;?>px)!important;" alt="">
+                                        <?php if ($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
+                                                                         style="transform: translate(<?php echo $positionImg; ?>px,
+                                                                         <?php echo $positionImgY; ?>px)!important;"
+                                                                         alt="">
                                     </div><?php endif; ?>
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
+                                             <?php echo $positionRightImgY; ?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"
-                                            style="transform: translate(<?php echo $position_title['x']; ?>px,
-                                            <?php echo $position_title['y'];?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"
-                                             style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
-                                             <?php echo $position_subtitle['y'];?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"
-                                             style="transform: translate(<?php echo $position_desc['x']; ?>px,
-                                             <?php echo $position_desc['y'];?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1 class="h1"
+                                                                      style="transform: translate(<?php echo $position_title['x']; ?>px,
+                                                                      <?php echo $position_title['y']; ?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"
+                                                 style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
+                                                 <?php echo $position_subtitle['y']; ?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"
+                                                 style="transform: translate(<?php echo $position_desc['x']; ?>px,
+                                                 <?php echo $position_desc['y']; ?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                                style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                                <?php echo $position_btn['y']; ?>px)!important;"
+                                                href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                                target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span>
                                             <?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span><?php endif; ?>
@@ -115,12 +114,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -135,12 +139,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -155,12 +164,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right center-mobile">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -173,9 +187,7 @@ $tax_type = 'toys_category';
 
                 endif; ?>
             </div>
-
             <div class="main-slider js-main-slider tablet-slider">
-
                 <?php
                 $section = get_field('slider_add');
 
@@ -186,9 +198,9 @@ $tax_type = 'toys_category';
                         if ($item['hide']) continue;
 
                         // todo option background
-                        $imgBckgr = ( $item['bckgr'] )? $item['bckgr'] : '';
-                        $imgBckgrMob = ( $item['bckgr_mob'] )? $item['bckgr_mob'] : '';
-                        $imgBckgrTab = ( $item['bckgr_tab'] )? $item['bckgr_tab'] : '';
+                        $imgBckgr = ($item['bckgr']) ? $item['bckgr'] : '';
+                        $imgBckgrMob = ($item['bckgr_mob']) ? $item['bckgr_mob'] : '';
+                        $imgBckgrTab = ($item['bckgr_tab']) ? $item['bckgr_tab'] : '';
 
                         // todo option title
                         $title = $item['title_tab'];
@@ -226,35 +238,39 @@ $tax_type = 'toys_category';
                         $link['target'] = (!empty($item['link_tab']['target'])) ? $item['link_tab']['target'] : '';
 
                         if ($item['position'] == 2) { ?>
-
                             <div class="main-slider__item main-slider__item_with-bg"
                                  style="background-image:url(<?php echo $imgBckgr['url']; ?>)"
                                  data-mob-href="<?php echo $imgBckgrMob['url']; ?>"
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
-                                        <?php if($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
-                                             style="transform: translate(<?php echo $positionImg; ?>px,
-                                             <?php echo $positionImgY;?>px)!important;" alt="">
+                                        <?php if ($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
+                                                                         style="transform: translate(<?php echo $positionImg; ?>px,
+                                                                         <?php echo $positionImgY; ?>px)!important;"
+                                                                         alt="">
                                     </div><?php endif; ?>
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
+                                             <?php echo $positionRightImgY; ?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"
-                                            style="transform: translate(<?php echo $position_title['x']; ?>px,
-                                            <?php echo $position_title['y'];?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"
-                                             style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
-                                             <?php echo $position_subtitle['y'];?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"
-                                             style="transform: translate(<?php echo $position_desc['x']; ?>px,
-                                             <?php echo $position_desc['y'];?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1 class="h1"
+                                                                      style="transform: translate(<?php echo $position_title['x']; ?>px,
+                                                                      <?php echo $position_title['y']; ?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"
+                                                 style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
+                                                 <?php echo $position_subtitle['y']; ?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"
+                                                 style="transform: translate(<?php echo $position_desc['x']; ?>px,
+                                                 <?php echo $position_desc['y']; ?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                                style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                                <?php echo $position_btn['y']; ?>px)!important;"
+                                                href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                                target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span>
                                             <?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span><?php endif; ?>
@@ -271,12 +287,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -291,12 +312,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -311,12 +337,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right center-mobile">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -330,7 +361,6 @@ $tax_type = 'toys_category';
                 endif; ?>
             </div>
             <div class="main-slider js-main-slider mobile-slider">
-
                 <?php
                 $section = get_field('slider_add');
 
@@ -341,9 +371,9 @@ $tax_type = 'toys_category';
                         if ($item['hide']) continue;
 
                         // todo option background
-                        $imgBckgr = ( $item['bckgr'] )? $item['bckgr'] : '';
-                        $imgBckgrMob = ( $item['bckgr_mob'] )? $item['bckgr_mob'] : '';
-                        $imgBckgrTab = ( $item['bckgr_tab'] )? $item['bckgr_tab'] : '';
+                        $imgBckgr = ($item['bckgr']) ? $item['bckgr'] : '';
+                        $imgBckgrMob = ($item['bckgr_mob']) ? $item['bckgr_mob'] : '';
+                        $imgBckgrTab = ($item['bckgr_tab']) ? $item['bckgr_tab'] : '';
 
                         // todo option title
                         $title = $item['title_mob'];
@@ -388,28 +418,33 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__img<?php echo ($count === 1) ? ' img1' : ''; ?>">
-                                        <?php if($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
-                                             style="transform: translate(<?php echo $positionImg; ?>px,
-                                             <?php echo $positionImgY;?>px)!important;" alt=""><?php endif; ?>
+                                        <?php if ($imgLeft_show): ?><img src="<?php echo $imgLeft['url'] ?>"
+                                                                         style="transform: translate(<?php echo $positionImg; ?>px,
+                                                                         <?php echo $positionImgY; ?>px)!important;"
+                                                                         alt=""><?php endif; ?>
                                     </div>
                                     <div class="main-slider__img-bottom">
                                         <img src="<?php echo $imgRight['url'] ?>"
                                              style="transform: translate(<?php echo $positionRightImg; ?>px,
-                                             <?php echo $positionRightImgY;?>px)!important;" alt="">
+                                             <?php echo $positionRightImgY; ?>px)!important;" alt="">
                                     </div>
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"
-                                            style="transform: translate(<?php echo $position_title['x']; ?>px,
-                                            <?php echo $position_title['y'];?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"
-                                             style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
-                                             <?php echo $position_subtitle['y'];?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"
-                                             style="transform: translate(<?php echo $position_desc['x']; ?>px,
-                                             <?php echo $position_desc['y'];?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1 class="h1"
+                                                                      style="transform: translate(<?php echo $position_title['x']; ?>px,
+                                                                      <?php echo $position_title['y']; ?>px)!important;"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"
+                                                 style="transform: translate(<?php echo $position_subtitle['x']; ?>px,
+                                                 <?php echo $position_subtitle['y']; ?>px)!important;"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"
+                                                 style="transform: translate(<?php echo $position_desc['x']; ?>px,
+                                                 <?php echo $position_desc['y']; ?>px)!important;"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                                style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                                <?php echo $position_btn['y']; ?>px)!important;"
+                                                href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                                target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span>
                                             <?php echo $link['title']; ?><?php endif; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span>
@@ -426,12 +461,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?>
                                             <span class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -446,12 +486,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -466,12 +511,17 @@ $tax_type = 'toys_category';
                                  data-tab-href="<?php echo $imgBckgrTab['url']; ?>">
                                 <div class="wrapper">
                                     <div class="main-slider__right center-mobile">
-                                        <?php if($title_show): ?><h1 class="h1"><?php echo $title; ?></h1><?php endif; ?>
-                                        <?php if($subtitle_show): ?><div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
-                                        <?php if($desc_show): ?><div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
-                                        <?php if($link_show): ?><a style="transform: translate(<?php echo $position_btn['x']; ?>px,
-                                           <?php echo $position_btn['y'];?>px)!important;"
-                                           href="<?php echo $link['url']; ?>" class="btn btn_pink" target="<?php echo $link['target']; ?>">
+                                        <?php if ($title_show): ?><h1
+                                                class="h1"><?php echo $title; ?></h1><?php endif; ?>
+                                        <?php if ($subtitle_show): ?>
+                                            <div class="h1-descr"><?php echo $subtitle; ?></div><?php endif; ?>
+                                        <?php if ($desc_show): ?>
+                                            <div class="main-slider__text"><?php echo $desc; ?></div><?php endif; ?>
+                                        <?php if ($link_show): ?><a
+                                            style="transform: translate(<?php echo $position_btn['x']; ?>px,
+                                            <?php echo $position_btn['y']; ?>px)!important;"
+                                            href="<?php echo $link['url']; ?>" class="btn btn_pink"
+                                            target="<?php echo $link['target']; ?>">
                                             <span class="btn__icon">.</span><?php echo $link['title']; ?><span
                                                     class="btn__icon btn__icon_reverse">.</span></a><?php endif; ?>
                                     </div>
@@ -659,7 +709,7 @@ $tax_type = 'toys_category';
                                     <?php the_sub_field('text'); ?>
                                     <span class="nav__icon">У</span>
                                 </div>
-                        </div>
+                            </div>
                         <?php }
 
                     endif;
@@ -698,29 +748,30 @@ $tax_type = 'toys_category';
                 <h2 class="h2 h2_pink"><span class="h2__icon">Ч</span>Новости<span
                             class="h2__icon h2__icon_reverse">Ч</span></h2>
                 <div class="news">
-                <?php
-                $posts = get_posts(array(
-                    'numberposts' => get_field('news_count'),
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'suppress_filters' => true,
-                ));
+                    <?php
+                    $posts = get_posts(array(
+                        'numberposts' => get_field('news_count'),
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                        'suppress_filters' => true,
+                    ));
 
-                foreach ($posts as $post) {
-                    setup_postdata($post); ?>
-                    <a href="<?php the_permalink(); ?>" class="news__item">
-                        <div class="news__photo">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                        </div>
-                        <div class="news__title"><?php the_title(); ?></div>
-                        <div class="news__date"><?php the_date('d. m. Y'); ?></div>
-                        <div class="news__text"><?php the_excerpt(); ?></div>
-                    </a>
-                <?php }
-                wp_reset_postdata(); ?>
+                    foreach ($posts as $post) {
+                        setup_postdata($post); ?>
+                        <a href="<?php the_permalink(); ?>" class="news__item">
+                            <div class="news__photo">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                            </div>
+                            <div class="news__title"><?php the_title(); ?></div>
+                            <div class="news__date"><?php the_date('d. m. Y'); ?></div>
+                            <div class="news__text"><?php the_excerpt(); ?></div>
+                        </a>
+                    <?php }
+                    wp_reset_postdata(); ?>
                 </div>
                 <div class="news__btn">
-                    <a href="<?php the_permalink(27); ?>" class="btn btn_pink"><span class="btn__icon">.</span>Все новости<span
+                    <a href="<?php the_permalink(27); ?>" class="btn btn_pink"><span class="btn__icon">.</span>Все
+                        новости<span
                                 class="btn__icon btn__icon_reverse">.</span></a>
                 </div>
             </div>
